@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mega Quiz Challenge</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Noto Sans', Arial, sans-serif;
+      background: #f8f9fa;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: transparent;
+      color: white;
+      padding: 0px;
+      text-align: center;
+    }
+    .header-img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      display: block;
+    }
+    .container {
+      max-width: 800px;
+      margin: 30px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #ffffff;
+      font-family: 'Noto Sans', Arial, sans-serif;
+    }
+    h2 {
+      color: black;
+      font-family: 'Noto Sans', Arial, sans-serif;
+      margin-bottom: 8px;
+    }
+    .container ol {
+      margin-top: 0;
+    }
+    .btn {
+      display: inline-block;
+      background: #28a745;
+      color: white;
+      padding: 18px 28px;
+      font-size: 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+      margin-top: 10px;
+      font-family: 'Noto Sans', Arial, sans-serif;
+    }
+    .btn:hover {
+      background: #218838;
+    }
+    @media (max-width: 600px) {
+      .btn {
+        width: 100%;
+        text-align: center;
+        font-size: 20px;
+        padding: 18px 0;
+      }
+      .container {
+        margin: 15px;
+        padding: 15px;
+      }
+    }
+    .rules {
+      background: #4F0A5A;
+      padding: 5px;
+      border-radius: 8px;
+      margin-top: 10px;
+      color: white;
+      font-size: 16px;
+      max-height: 200px;
+      overflow-y: auto;
+      font-family: 'Noto Sans', Arial, sans-serif;
+    }
+    .rules h1 {
+      font-size: 16px;
+      margin-top: 0;
+      color: white;
+      font-family: 'Noto Sans', Arial, sans-serif;
+    }
+    .qr {
+      text-align: center;
+      margin-top: 20px;
+      font-family: 'Noto Sans', Arial, sans-serif;
+    }
+    .qr img {
+      width: 150px;
+      max-width: 100%;
+      border: px solid #ffffff;
+      border-radius: 12px;
+      display: block;
+      margin: 0 auto;
+    }
+    ol, li, p, b, strong {
+      font-family: 'Noto Sans', Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://i.postimg.cc/DfB1Y8XV/skill.jpg"
+         alt="Header Image"
+         class="header-img">
+    <p style="color: purple; font-size: 16px;">
+      Skill Contest में participate कर के पाइए मौका
+      <strong>[Electric Scooty worth 75000 Rs]</strong> जीतने का
+    </p>
+  </header>
+  <div class="container">
+    <h2>कैसे भाग लें?</h2>
+    <ol style="font-size: 12px;">
+      <li>नीचे दिए गए बटन या QR Code से ₹750 UPI Payment करें।</li>
+      <li>उसके बाद Google Form भरें और payment screenshot व अन्य upload करें।</li>
+      <li>उसके बाद आपका Skill Test होगा, जिसके समय और तारीख की सूचना आपको SMS/Whatsapp/Email के द्वारा दे दी जाएगी। <li>Exam में highest score लेने वालों में से विजेता lucky draw द्वारा चुना जाएगा।</li>
+      <li>सभी participents को Achivement Certificate bhi diya jaye</li>
+    </ol>
+    <h2>कौन भाग ले सकता है?</h2>
+    <ol style="font-size: 14px;">
+      <li>कोई भी विद्यार्थी जो कम से कम कक्षा 9th में पढ़ता हो।</li>
+      <li>जिसकी उम्र 13 से 25 वर्ष के बीच हो।</li>
+    </ol>
+  </div>
+  <div class="container">
+    <h2>Payment:</h2>
+    <a href="upi://pay?pa=hmt2cu@okaxis&pn=Harmeet Singh&am=750&cu=INR" class="btn">
+      💳 Mobile से ₹750 जमा करें
+    </a>
+    <div class="qr">
+      <p>या QR Code scan करें:</p>
+      <img src="https://i.postimg.cc/RF70sc7z/750-qr.jpg"
+           alt="UPI QR Code">
+      <p><b>UPI ID:</b> hmt2cu@okaxis</p>
+      <p><b>Amount:</b> ₹750</p>
+    </div>
+    <h2>Entry Form:</h2>
+    <a href="https://forms.gle/uCVvNQjMHFTZkm9c7" target="_blank" class="btn">
+      📝 Contest Form भरें
+    </a>
+  </div>
+  <div class="container">
+    <h2>📌 Skill Test Guidelines / कौशल परीक्षा के दिशा-निर्देश</h2>
+    <ol style="font-size: 12px;">
+      <li>प्रतियोगिता में भाग लेने वाले उम्मीदवारों को लिखित कौशल परीक्षा में शामिल होना अनिवार्य है।</li>
+      <li>परीक्षा में <strong>6th से 10th तक NCERT Books (English Maths & Science)</strong>, सामान्य ज्ञान (GK), तार्किक क्षमता और कौशल आधारित प्रश्न शामिल होंगे।</li>
+      <li>परीक्षा की तिथि, समय और माध्यम (ऑनलाइन/ऑफलाइन) ईमेल/सूचना के माध्यम से सूचित किया जाएगा।</li>
+      <li>उम्मीदवारों को परीक्षा के दौरान ईमानदारी और अनुशासन बनाए रखना होगा।</li>
+      <li>किसी भी प्रकार की नकल या अनुचित गतिविधि होने पर उम्मीदवार को अयोग्य घोषित किया जा सकता है।</li>
+      <li>परीक्षा की अवधि और प्रश्नों की संख्या पहले से निर्धारित होगी और उम्मीदवारों को सूचित की जाएगी।</li>
+      <li>परिणाम सही उत्तरों और स्कोर के आधार पर घोषित किए जाएंगे।</li>
+    </ol>
+    <div class="rules">
+      <h1>Terms & Conditions:</h1>
+      <p style="color: white; font-size: 10px;">
+        यह contest skill-based है, lottery नहीं। Entry Fee non-refundable है।
+        सही उत्तर देने वालों में से एक विजेता lucky draw द्वारा चुना जाएगा।
+        Organizer का decision final होगा।
+        यह contest केवल मनोरंजन और कौशल प्रदर्शन के लिए है।
+        हम किसी भी कानूनी सलाह की जिम्मेदारी नहीं लेते हैं, इसलिए सभी प्रतिभागियों को अपने जोखिम पर ही भाग लेना चाहिए।
+      </p>
+    </div>
+  </div>
+</body>
+</html>
