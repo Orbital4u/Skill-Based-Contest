@@ -1,0 +1,14 @@
+# GitHub Pages / Jekyll basic config for project site
+# If you use a theme, uncomment the theme line below.
+# theme: jekyll-theme-cayman
+
+# Site metadata
+name: Skill-Based Contest
+title: Skill-Based Contest
+description: NCERT आधारित द्विभाषी (Hindi + English) MCQ प्रतियोगिता
+url: "https://orbital4u.github.io"
+baseurl: "/Skill-Based-Contest"
+
+# Build options
+permalink: pretty
+exclude: ["README.md", "node_modules", "scripts"]
