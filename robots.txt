@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://orbital4u.github.io/Skill-Based-Contest/sitemap.xml
