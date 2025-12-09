@@ -10,7 +10,7 @@
   <meta name="author" content="Orbital Skill Development" />
   <link rel="canonical" href="https://orbital4u.github.io/Skill-Based-Contest/" />
 
-  <!-- OG Tags -->
+  <!-- Open Graph -->
   <meta property="og:title" content="Skill Based Contest 2025 — Mega Quiz Challenge" />
   <meta property="og:description" content="NCERT आधारित MCQ Skill Contest. Merit Ranking, Certificates और स्कूटी जीतने का मौका. अभी रजिस्टर करें!" />
   <meta property="og:image" content="https://i.postimg.cc/DfB1Y8XV/skill.jpg" />
@@ -28,7 +28,7 @@
   }
   </script>
 
-  <!-- GA4 FIXED -->
+  <!-- GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-E9DF1J8JYG"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -37,174 +37,131 @@
     gtag('config', 'G-E9DF1J8JYG');
   </script>
 
-  <!-- STYLES -->
+  <!-- Styles -->
   <style>
-    :root { --purple:#4F0A5A; --green:#28a745; --bg:#f8f9fa; }
-
-    body {
+    :root { --purple:#4F0A5A; --green:#28a745; --bg:#f8f9fa; --text:#222; }
+    *{box-sizing:border-box}
+    body{
       font-family: 'Noto Sans', Arial, sans-serif;
-      background: var(--bg);
-      margin: 0;
-      padding: 0;
-      color: #222;
+      background:var(--bg);
+      margin:0;color:var(--text);
+      -webkit-font-smoothing:antialiased;
     }
+    header{ text-align:center;padding:8px 12px 0 }
+    .header-img{ width:100%; max-height:320px; object-fit:cover; border-radius:12px; display:block; margin:0 auto; }
+    .summary-note{ color:var(--purple); font-size:16px; margin:10px 0 16px; font-weight:700; }
 
-    header {
-      text-align: center;
-      padding: 0;
-    }
+    .container{ max-width:980px; margin:20px auto; background:#fff; padding:20px; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.06) }
+    h1{ color:var(--purple); margin:0 0 12px; font-size:26px }
+    h2{ color:#111; margin:10px 0; font-size:20px }
+    p, li { font-size:15px; line-height:1.6; margin:8px 0; }
+    ol{ margin-left:18px; padding-left:0 }
 
-    .header-img {
-      width: 100%;
-      max-height: 300px;
-      object-fit: cover;
-      border-radius: 12px;
-      display: block;
-    }
+    .btn{ display:inline-block; background:var(--green); color:#fff; padding:12px 18px; border-radius:10px; text-decoration:none; font-weight:700; margin-top:10px }
+    .btn:focus{ outline:3px solid rgba(40,167,69,0.2) }
+    .qr{ text-align:center; margin-top:14px }
+    .qr img{ width:150px; border-radius:10px; display:block; margin:8px auto }
 
-    .summary-note {
-      color: var(--purple);
-      font-size: 17px;
-      margin-top: 6px;
-      font-weight: bold;
-    }
+    .rules{ background:var(--purple); padding:16px; border-radius:10px; margin-top:14px; color:#fff }
+    .rules h2{ margin:0 0 8px; font-size:16px; color:#fff }
+    .rules p, .rules li{ color:#fff; font-size:14px }
 
-    .container {
-      max-width: 900px;
-      margin: 25px auto;
-      background: white;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    h1, h2 {
-      font-family: 'Noto Sans', Arial, sans-serif;
-      margin-bottom: 10px;
-    }
-
-    h1 { color: var(--purple); }
-    h2 { color: #111; }
-
-    .btn {
-      display: inline-block;
-      background: var(--green);
-      color: white;
-      padding: 16px 24px;
-      border-radius: 10px;
-      font-size: 20px;
-      font-weight: bold;
-      text-decoration: none;
-      margin-top: 10px;
-    }
-
-    .btn:hover { background: #1f7a35; }
-
-    .qr { text-align:center; margin-top:18px; }
-    .qr img {
-      width:150px;
-      border-radius:10px;
-    }
-
-    /* FIXED RULES BOX */
-    .rules {
-      background: var(--purple);
-      padding: 15px;
-      border-radius: 10px;
-      margin-top: 15px;
-      color: #fff !important;
-    }
-
-    .rules h2, .rules p, .rules li {
-      color: #fff !important;
-      font-size: 14px;
-      line-height: 1.5;
-    }
+    footer{ text-align:center; margin:18px auto 40px; color:#444; font-size:14px }
 
     @media(max-width:600px){
-      .container { margin:15px; padding:15px; }
-      .btn { width:100%; text-align:center; font-size:18px; }
+      .container{ margin:12px; padding:14px }
+      h1{ font-size:20px }
+      .btn{ width:100%; text-align:center; font-size:16px; padding:12px }
+      .qr img{ width:130px }
     }
   </style>
 </head>
 
 <body>
+  <header>
+    <img src="https://i.postimg.cc/DfB1Y8XV/skill.jpg" alt="Skill Based Contest banner" class="header-img">
+    <p class="summary-note">Skill Contest में हिस्सा लेकर पाएं मौका — <strong>Electric Scooty (₹75,000)</strong> जीतने का!</p>
+  </header>
 
-<header>
-  <img src="https://i.postimg.cc/DfB1Y8XV/skill.jpg" alt="Skill Contest Banner" class="header-img">
-  <p class="summary-note">
-    Skill Contest में हिस्सा लेकर पाएं मौका — <strong>Electric Scooty (₹75,000)</strong> जीतने का!
-  </p>
-</header>
+  <!-- Participate / Payment / Form -->
+  <section class="container" id="participate" aria-labelledby="participate-heading">
+    <h1 id="participate-heading">Mega Quiz Challenge — Skill Based Contest</h1>
 
-<div class="container">
-  <h1>Mega Quiz Challenge — Skill Based Contest</h1>
+    <h2>कैसे भाग लें?</h2>
+    <ol>
+      <li>नीचे दिए UPI/QR से ₹750 की entry fee जमा करें।</li>
+      <li>Payment का screenshot लेकर Google Form में upload करें।</li>
+      <li>Form submit करने के बाद confirmation email/WhatsApp/SMS प्राप्त होगा।</li>
+      <li>Exam की तारीख/समय सूचना के अनुसार दी जाएगी; विजेताओं का चयन merit + lucky draw के आधार पर किया जाएगा।</li>
+    </ol>
 
-  <h2>कैसे भाग लें?</h2>
-  <ol>
-    <li>नीचे दिए गए UPI/QR से ₹750 Payment करें।</li>
-    <li>Payment Screenshot लेकर Google Form भरें।</li>
-    <li>Exam की तारीख/समय Email/WhatsApp द्वारा मिलेगा।</li>
-    <li>Highest scorers में से विजेता lucky draw द्वारा चुना जाएगा।</li>
-  </ol>
+    <h2>कौन भाग ले सकता है?</h2>
+    <ol>
+      <li>कक्षा 9th और उससे ऊपर पढ़ने वाले विद्यार्थी।</li>
+      <li>सामान्य आयु सीमा: 13–25 वर्ष (अनुमानित)।</li>
+    </ol>
 
-  <h2>कौन भाग ले सकता है?</h2>
-  <ol>
-    <li>कक्षा 9th से ऊपर का कोई भी विद्यार्थी।</li>
-    <li>आयु 13–25 वर्ष।</li>
-  </ol>
+    <div style="margin-top:12px;">
+      <a class="btn" href="upi://pay?pa=hmt2cu@okaxis&pn=Harmeet Singh&am=750&cu=INR" aria-label="UPI pay ₹750">💳 ₹750 UPI से भुगतान करें</a>
+    </div>
 
-  <a class="btn" href="upi://pay?pa=hmt2cu@okaxis&pn=Harmeet Singh&am=750&cu=INR">
-    💳 ₹750 UPI Payment करें
-  </a>
+    <div class="qr" aria-hidden="false">
+      <p>या QR Code स्कैन करें:</p>
+      <img src="https://i.postimg.cc/RF70sc7z/750-qr.jpg" alt="UPI QR Code for ₹750">
+      <p><strong>UPI ID:</strong> hmt2cu@okaxis • <strong>Amount:</strong> ₹750</p>
+    </div>
 
-  <div class="qr">
-    <p>या नीचे दिया QR Code स्कैन करें:</p>
-    <img src="https://i.postimg.cc/RF70sc7z/750-qr.jpg" alt="UPI QR Code">
-    <p><b>UPI:</b> hmt2cu@okaxis | <b>Amount:</b> ₹750</p>
-  </div>
+    <h2 style="margin-top:14px">Entry Form</h2>
+    <p>Contest form भरने के लिये नीचे क्लिक करें:</p>
+    <p><a class="btn" href="https://forms.gle/uCVvNQjMHFTZkm9c7" target="_blank" rel="noopener">📝 Contest Form भरें</a></p>
+  </section>
 
-  <h2>Entry Form</h2>
-  <a class="btn" href="https://forms.gle/uCVvNQjMHFTZkm9c7" target="_blank">📝 Contest Form भरें</a>
-</div>
+  <!-- Guidelines + Terms -->
+  <section class="container" id="guidelines" aria-labelledby="guidelines-heading">
+    <h2 id="guidelines-heading">📌 Skill Test Guidelines</h2>
+    <ol>
+      <li>सभी प्रतिभागियों को लिखित/ऑनलाइन परीक्षा देना आवश्यक है।</li>
+      <li>परीक्षा में NCERT (कक्षा 6–10) से Maths, Science, सामान्य ज्ञान, तार्किक क्षमता और कौशल-आधारित प्रश्न होंगे।</li>
+      <li>परीक्षा की तिथि, समय और माध्यम (online/offline) e-mail / WhatsApp के माध्यम से सूचित किया जाएगा।</li>
+      <li>परीक्षा के दौरान अनुशासन एवं ईमानदारी बनाए रखें; नकल पाए जाने पर उम्मीदवार अयोग्य ठहराया जा सकता है।</li>
+      <li>परिणाम सही उत्तर और कुल स्कोर के आधार पर घोषित किए जाएंगे।</li>
+    </ol>
 
-<div class="container">
-  <h2>📌 Skill Test Guidelines</h2>
-  <ol>
-    <li>सभी प्रतिभागियों को लिखित/ऑनलाइन परीक्षा देनी अनिवार्य है।</li>
-    <li>परीक्षा में NCERT 6–10 Maths, Science, GK, Reasoning के MCQs होंगे।</li>
-    <li>Exam mode/time आपको Email/WhatsApp पर मिलेगा।</li>
-    <li>नकल या cheating करने पर अयोग्य घोषित किया जा सकता है।</li>
-    <li>परिणाम सही उत्तरों और स्कोर के आधार पर होंगे।</li>
-  </ol>
+    <div class="rules" role="region" aria-label="Terms and Conditions">
+      <h2>Terms &amp; Conditions</h2>
+      <p>
+        यह contest skill-based है; Entry fee non-refundable है। विजेता lucky draw के माध्यम से चुने जा सकते हैं। Organizer का निर्णय अंतिम होगा। प्रतिभागी स्वयं के जोखिम व जिम्मेदारी पर भाग लें। यह कोई gambling/lottery नहीं है; prize selection प्रक्रिया पारदर्शी रखी जाएगी।
+      </p>
+    </div>
+  </section>
 
-  <div class="rules">
-    <h2>Terms & Conditions</h2>
-    <p>
-      यह contest पूरी तरह skill-based है। Entry fee non-refundable है।  
-      विजेता lucky draw द्वारा चुना जाएगा। Organizer का निर्णय अंतिम होगा।  
-      प्रतिभागी स्वयं के जोखिम व जिम्मेदारी पर भाग लें।
-      यह कोई gambling/lottery नहीं है; prize selection प्रक्रिया पूरी तरह transparent है।
-    </p>
-  </div>
-</div>
+  <!-- FAQ -->
+  <section class="container" id="faq" aria-labelledby="faq-heading">
+    <h2 id="faq-heading">अक्सर पूछे जाने वाले प्रश्न</h2>
 
-</body>
-</html>
+    <p><strong>1) Payment failed तो क्या करें?</strong><br>
+    Payment का screenshot लेकर Google Form के support field में upload करें, या support ईमेल पर भेजें (अपना वास्तविक support-email यहाँ डालें)।</p>
 
+    <p><strong>2) Certificate कब मिलेगा?</strong><br>
+    परिणाम घोषित होने के 7–14 दिनों के भीतर digital certificate उपलब्ध कराया जाएगा।</p>
 
-    <section class="container" id="faq">
-      <h2>अक्सर पूछे जाने वाले प्रश्न</h2>
-      <ol>
-        <li><strong>Payment failed तो क्या करें?</strong> — Payment screenshot लेकर form के support field में upload करें या info@orbital4u.example पर भेजें.</li>
-        <li><strong>Certificate कब मिलेगा?</strong> — परिणाम घोषित होने के 7–14 दिनों के भीतर डिजिटल certificate उपलब्ध कराए जाएंगे।</li>
-        <li><strong>Exam mode?</strong> — अधिकांश मामलों में online; कुछ locations पर offline center भी उपलब्ध हो सकता है।</li>
-      </ol>
-    </section>
+    <p><strong>3) Exam mode क्या होगा?</strong><br>
+    अधिकांश मामलों में exam online होगा; कुछ locations पर offline center भी उपलब्ध हो सकते हैं।</p>
 
-    <footer class="container" style="text-align:center;">
+    <p><strong>4) Entry fee refundable है?</strong><br>
+    नहीं — Entry fee non-refundable है।</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container" style="text-align:center;">
       <p>© <span id="year">2025</span> Orbital Skill Development • <a href="/privacy.html">Privacy</a> | <a href="/terms.html">Terms</a></p>
-    </footer>
-  </main>
+    </div>
+  </footer>
+
+  <script>
+    // Small: set current year dynamically (if needed)
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
