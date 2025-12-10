@@ -43,94 +43,167 @@
   </script>
 
   <style>
-    :root { 
-      --purple: #4F0A5A; 
-      --green: #28a745; 
-      --gold: #ffb703;
-      --bg: #f8f9fa; 
-      --text: #222; 
-      --shadow-light: 0 4px 12px rgba(0,0,0,0.08);
-      --shadow-dark: 0 8px 20px rgba(0,0,0,0.15);
-    }
-    *{box-sizing:border-box}
-    body{
-      font-family: 'Noto Sans', Arial, sans-serif;
-      background:var(--bg);
-      margin:0;color:var(--text);
-      -webkit-font-smoothing:antialiased;
-    }
-    
-    .container{ max-width:980px; margin:20px auto; padding:0 15px; }
-    h1, h2, h3 { font-family: 'Poppins', sans-serif; color: var(--purple); }
-    h1{ margin:0 0 12px; font-size:26px }
-    h2{ margin:10px 0; font-size:20px }
-    p, li { font-size:15px; line-height:1.6; margin:8px 0; }
-    a { text-decoration: none; }
+  :root { 
+    --purple: #4F0A5A; 
+    --green: #28a745; 
+    --gold: #ffb703;
+    --bg: #f8f9fa; 
+    --text: #222; 
+    --shadow-light: 0 4px 12px rgba(0,0,0,0.08);
+    --shadow-dark: 0 8px 20px rgba(0,0,0,0.15);
 
-    /* Buttons */
-    .btn{ 
-      display:inline-block; background:var(--green); color:#fff; padding:12px 24px; 
-      border-radius:10px; font-weight:700; margin-top:10px; transition: 0.3s;
-      box-shadow: 0 4px 10px rgba(40,167,69,0.3);
-    }
-    .btn:hover{ transform: translateY(-2px); box-shadow: 0 6px 15px rgba(40,167,69,0.4); }
+    /* ACCESSIBLE COLORS */
+    --accessible-cta-bg: #136F3A;   /* darker green for buttons */
+    --accessible-cta-text: #FFFFFF;
+    --accessible-link: #E5E5E5;     /* footer / nav link readable on dark bg */
+    --gold-dark: #8C6A00;           /* readable gold */
+    --silver-dark: #6E6E6E;         /* readable silver */
+    --card-text: #333333;
+  }
 
-    /* Navigation Bar */
-    nav{ background:var(--purple); padding:10px 0; position:sticky; top:0; z-index:1000; box-shadow:0 3px 10px rgba(0,0,0,0.15); }
-    .nav-container{ max-width:1100px; margin:auto; display:flex; justify-content:space-between; align-items:center; padding:0 14px; }
-    .logo{ color:white; font-size:20px; font-weight:700; }
-    .nav-links{ display:flex; gap:18px; }
-    .nav-links a{ color:white; font-size: 15px; opacity: 0.9; }
-    .nav-links a:hover { color: var(--gold); opacity: 1; }
+  *{box-sizing:border-box}
+  body{
+    font-family: 'Noto Sans', Arial, sans-serif;
+    background:var(--bg);
+    margin:0;color:var(--text);
+    -webkit-font-smoothing:antialiased;
+  }
+  
+  .container{ max-width:980px; margin:20px auto; padding:0 15px; }
+  h1, h2, h3 { font-family: 'Poppins', sans-serif; color: var(--purple); }
+  h1{ margin:0 0 12px; font-size:26px }
+  h2{ margin:10px 0; font-size:20px }
+  p, li { font-size:15px; line-height:1.6; margin:8px 0; }
+  a { text-decoration: none; }
 
-    /* Header */
-    header{ text-align:center; padding:8px 0 0 }
-    .header-img{ width:100%; max-height:320px; object-fit:cover; border-radius:12px; display:block; margin:0 auto; box-shadow: var(--shadow-dark); }
-    .summary-note{ color:var(--purple); font-size:16px; margin:10px 0 16px; font-weight:700; }
+  /* Buttons */
+  .btn{ 
+    display:inline-block;
+    background:var(--accessible-cta-bg);
+    color:var(--accessible-cta-text);
+    padding:12px 24px;
+    border-radius:10px;
+    font-weight:700;
+    margin-top:10px;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(19,111,58,0.28);
+    text-decoration:none;
+  }
+  .btn:hover{ transform: translateY(-2px); box-shadow: 0 6px 15px rgba(19,111,58,0.36); }
+  .btn:focus { outline: 3px solid #FFD54F; outline-offset: 3px; }
 
-    /* Main Content Styling */
-    .content-card{ max-width:980px; margin:20px auto; background:#fff; padding:20px; border-radius:12px; box-shadow:var(--shadow-dark) }
-    
-    /* Premium Sections Styling (Simplified) */
-    .section { max-width:1100px; margin:40px auto; padding:0 16px; }
-    .feature-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:20px; margin-top:24px; }
-    .feature-card { background:#fff; padding:24px; border-radius:14px; box-shadow:var(--shadow-light); text-align:center; transition:0.2s; border: 1px solid transparent;}
-    .feature-card:hover { transform:translateY(-4px); border-color: var(--purple); }
-    .feature-card img { width:60px; margin-bottom:12px; }
+  /* Purple modifier for buttons (contrast-safe) */
+  .btn--purple{ background: var(--purple); box-shadow: 0 8px 15px rgba(79,10,90,0.3); color:var(--accessible-cta-text); }
 
-    /* Timeline */
-    .timeline { display:flex; gap:18px; margin-top:24px; overflow-x:auto; padding-bottom:10px; }
-    .time-box { min-width:200px; background:#fff; padding:18px; border-radius:12px; box-shadow:var(--shadow-light); }
-    .time-box h3 { font-size:18px; margin-bottom:6px; color:var(--purple); }
-    .time-box p { font-size:14px; }
+  /* Green button (alternate) */
+  .green-btn{
+    background:#1E7A34;
+    color:#FFFFFF;
+    padding:10px 20px;
+    font-weight:700;
+    text-decoration:none;
+    border-radius:50px;
+    display:inline-block;
+    box-shadow: 0 4px 10px rgba(30,122,52,0.24);
+  }
+  .green-btn:focus{ outline:3px solid #FFD54F; outline-offset:2px; }
 
-    /* FAQ */
-    .faq-container { max-width: 700px; margin: 0 auto; }
-    details { background:#fff; margin-bottom:10px; border-radius:12px; box-shadow:var(--shadow-light); cursor:pointer; }
-    summary { padding:16px; font-weight: 600; color: var(--purple); list-style: none; position: relative; }
-    summary::-webkit-details-marker { display: none; }
-    summary:after { content: '▶'; position: absolute; right: 20px; transform: rotate(0deg); transition: transform 0.3s; }
-    details[open] summary:after { transform: rotate(90deg); }
-    .faq-content { padding: 0 16px 16px; border-top: 1px solid #eee; margin-top: 8px; }
+  /* Navigation Bar */
+  nav{ background:var(--purple); padding:10px 0; position:sticky; top:0; z-index:1000; box-shadow:0 3px 10px rgba(0,0,0,0.15); }
+  .nav-container{ max-width:1100px; margin:auto; display:flex; justify-content:space-between; align-items:center; padding:0 14px; }
+  .logo{ color:white; font-size:20px; font-weight:700; }
+  .nav-links{ display:flex; gap:18px; }
+  .nav-links a{
+    color:var(--accessible-link);
+    font-size:15px;
+    opacity:0.95;
+    text-decoration:none;
+    font-weight:600;
+    padding:6px 8px;
+    border-radius:6px;
+  }
+  .nav-links a:hover { color: var(--gold-dark); opacity:1; background: rgba(255,255,255,0.03); }
 
-    /* Footer */
-    footer{ background:var(--purple); padding:30px 0 50px; text-align:center; color:#fff; font-size:14px; }
-    footer a { color: #ffebcd; margin: 0 10px; }
+  /* Header */
+  header{ text-align:center; padding:8px 0 0 }
+  .header-img{ width:100%; max-height:320px; object-fit:cover; border-radius:12px; display:block; margin:0 auto; box-shadow: var(--shadow-dark); }
+  .summary-note{ color:var(--purple); font-size:16px; margin:10px 0 16px; font-weight:700; }
 
-    /* Responsive */
-    @media(max-width:600px){
-      .content-card{ margin:12px; padding:14px }
-      h1{ font-size:20px }
-      .btn{ width:100%; text-align:center; font-size:16px; padding:12px }
-      .nav-links { display: none; }
-      .nav-container { justify-content: center; }
-    }
+  /* Main Content Styling */
+  .content-card{ max-width:980px; margin:20px auto; background:#fff; padding:20px; border-radius:12px; box-shadow:var(--shadow-dark) }
+  
+  /* Premium Sections Styling (Simplified) */
+  .section { max-width:1100px; margin:40px auto; padding:0 16px; }
+  .feature-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:20px; margin-top:24px; }
+  .feature-card { background:#fff; padding:24px; border-radius:14px; box-shadow:var(--shadow-light); text-align:center; transition:0.2s; border: 1px solid transparent;}
+  .feature-card:hover { transform:translateY(-4px); border-color: var(--purple); }
+  .feature-card img { width:60px; margin-bottom:12px; }
 
-    /* Ticker CSS */
-    @keyframes scroll-left {
-        0% { transform: translateX(100%); }
-        100% { transform: translateX(-100%); }
-    }
+  /* Timeline */
+  .timeline { display:flex; gap:18px; margin-top:24px; overflow-x:auto; padding-bottom:10px; }
+  .time-box { min-width:200px; background:#fff; padding:18px; border-radius:12px; box-shadow:var(--shadow-light); }
+  .time-box h3 { font-size:18px; margin-bottom:6px; color:var(--purple); }
+  .time-box p { font-size:14px; }
+
+  /* FAQ */
+  .faq-container { max-width: 700px; margin: 0 auto; }
+  details { background:#fff; margin-bottom:10px; border-radius:12px; box-shadow:var(--shadow-light); cursor:pointer; }
+  summary { padding:16px; font-weight: 600; color: var(--purple); list-style: none; position: relative; }
+  summary::-webkit-details-marker { display: none; }
+  summary:after { content: '▶'; position: absolute; right: 20px; transform: rotate(0deg); transition: transform 0.3s; }
+  details[open] summary:after { transform: rotate(90deg); }
+  .faq-content { padding: 0 16px 16px; border-top: 1px solid #eee; margin-top: 8px; }
+
+  /* Prize / Rank cards */
+  .prize-card{
+    background:#FFFFFF;
+    border-radius:12px;
+    padding:16px;
+    margin:12px 0;
+    border:3px solid transparent;
+    box-shadow: var(--shadow-light);
+    text-align:center;
+  }
+  .prize-gold{ border-color: #B8860B; }   /* darker gold border */
+  .prize-silver{ border-color: #7D7D7D; } /* darker silver border */
+
+  .prize-card h3{
+    margin:10px 0;
+    font-weight:700;
+    color:var(--card-text);
+    font-size:18px;
+  }
+  .prize-gold h3{ color: var(--gold-dark); }
+  .prize-silver h3{ color: var(--silver-dark); }
+
+  /* Footer */
+  footer{ background:var(--purple); padding:30px 0 50px; text-align:center; color:#fff; font-size:14px; }
+  footer a{
+    color:var(--accessible-link);
+    margin:0 10px;
+    text-decoration:none;
+    font-weight:600;
+  }
+  footer a:hover{ color:var(--accessible-cta-text); text-decoration:underline; }
+
+  /* Quiz option */
+  .quiz-option{ background:#fff; border:none; padding:12px; border-radius:8px; text-align:left; cursor:pointer; font-weight:500; }
+  .quiz-option:focus{ outline:3px solid #FFD54F; outline-offset:2px; }
+
+  /* Responsive */
+  @media(max-width:600px){
+    .content-card{ margin:12px; padding:14px }
+    h1{ font-size:20px }
+    .btn{ width:100%; text-align:center; font-size:16px; padding:12px }
+    .nav-links { display: none; }
+    .nav-container { justify-content: center; }
+  }
+
+  /* Ticker CSS */
+  @keyframes scroll-left {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+  }
   </style>
 </head>
 
@@ -146,38 +219,20 @@
 </div>
 
 <!-- NAVIGATION BAR -->
-<nav style="
-  width:100%;
-  background:#4F0A5A;
-  padding:10px 0;
-  position:sticky;
-  top:0;
-  z-index:1000;
-  box-shadow:0 3px 10px rgba(0,0,0,0.15);
-">
-  <div style="
-    max-width:1100px;
-    margin:auto;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:0 14px;
-  ">
-    <a href="/Skill-Based-Contest/" style="color:white; font-size:20px; font-weight:700; text-decoration:none;">
-      Orbital Skill
-    </a>
+<nav>
+  <div class="nav-container">
+    <a href="/Skill-Based-Contest/" class="logo">Orbital Skill</a>
 
-    <div style="display:flex; gap:18px;">
-      <a href="/Skill-Based-Contest/" style="color:white; text-decoration:none;">Home</a>
-      <a href="/Skill-Based-Contest/about.html" style="color:white; text-decoration:none;">About</a>
-      <a href="/Skill-Based-Contest/registration.html" style="color:white; text-decoration:none;">Registration</a>
-      <a href="/Skill-Based-Contest/contact.html" style="color:white; text-decoration:none;">Contact</a>
-      <a href="/Skill-Based-Contest/terms.html" style="color:white; text-decoration:none;">Terms</a>
-      <a href="/Skill-Based-Contest/privacy.html" style="color:white; text-decoration:none;">Privacy</a>
+    <div class="nav-links">
+      <a href="/Skill-Based-Contest/">Home</a>
+      <a href="/Skill-Based-Contest/about.html">About</a>
+      <a href="/Skill-Based-Contest/registration.html">Registration</a>
+      <a href="/Skill-Based-Contest/contact.html">Contact</a>
+      <a href="/Skill-Based-Contest/terms.html">Terms</a>
+      <a href="/Skill-Based-Contest/privacy.html">Privacy</a>
     </div>
   </div>
 </nav>
-
 
 <header>
   <div class="container" style="max-width: 1100px;">
@@ -190,164 +245,163 @@
         05 Days : 12 Hours : 30 Mins
       </div>
     </div>
-    
-    <a href="/Skill-Based-Contest/registration.html" class="btn" style="font-size: 18px; padding: 14px 30px;">
-      आज ही रजिस्टर करें →
+
+    <a href="/Skill-Based-Contest/registration.html" class="btn" aria-label="Register now - आज ही रजिस्टर करें" style="font-size: 22px; padding: 14px 30px;">
+      Register Now →
     </a>
   </div>
 </header>
-<section class="section">
-  <div class="content-card">
-    <h1>Welcome to the National Skill-Based Competition</h1>
-    <p>
-      Orbital Skill Development Institute देशभर के विद्यार्थियों को आधुनिक कौशल
-      मूल्यांकन का अवसर प्रदान करता है। हमारा उद्देश्य है कि युवा केवल classroom
-      knowledge तक सीमित न रहें, बल्कि real-world skills और aptitude को भी विकसित करें।
-    </p>
-    <p style="border-left: 3px solid var(--purple); padding-left: 10px; font-style: italic;">
-      यह Contest learning, assessment और personal development—तीनों का संतुलित मिश्रण है।
-      यह students को 21st-century कौशलों के लिए तैयार करता है।
-    </p>
-  </div>
-</section>
 
-<section class="section container">
-  <h2 style="text-align: center; font-size: 28px; margin-bottom: 30px;">🏆 Grand Rewards Distribution</h2>
-  <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
-    
-    <div style="background: #fff; border: 3px solid gold; border-radius: 12px; padding: 25px; text-align: center; width: 280px; box-shadow: var(--shadow-dark);">
-      <div style="font-size: 40px;">🥇</div>
-      <h3 style="color: #d4af37; margin: 10px 0;">Rank 1 Winner</h3>
-      <p style="font-weight: bold; font-size: 20px; color: var(--purple);">Electric Scooty</p>
-      <span style="font-size: 14px; color: #555;">(Worth ₹75,000)</span>
+<main id="main-content" role="main">
+  <section class="section">
+    <div class="content-card">
+      <h1>Welcome to the National Skill-Based Competition</h1>
+      <p>
+        Orbital Skill Development Institute देशभर के विद्यार्थियों को आधुनिक कौशल
+        मूल्यांकन का अवसर प्रदान करता है। हमारा उद्देश्य है कि युवा केवल classroom
+        knowledge तक सीमित न रहें, बल्कि real-world skills और aptitude को भी विकसित करें।
+      </p>
+      <p style="border-left: 3px solid var(--purple); padding-left: 10px; font-style: italic;">
+        यह Contest learning, assessment और personal development—तीनों का संतुलित मिश्रण है।
+        यह students को 21st-century कौशलों के लिए तैयार करता है।
+      </p>
     </div>
+  </section>
 
-    <div style="background: #fff; border: 3px solid silver; border-radius: 12px; padding: 25px; text-align: center; width: 280px; box-shadow: var(--shadow-dark);">
-      <div style="font-size: 40px;">🥈</div>
-      <h3 style="color: #a9a9a9; margin: 10px 0;">Rank 2</h3>
-      <p style="font-weight: bold; font-size: 20px; color: var(--purple);">Smart Tablets</p>
-      <span style="font-size: 14px; color: #555;">+ Merit Certificate</span>
-    </div>
-
-    <div style="background: #fff; border: 3px solid #cd7f32; border-radius: 12px; padding: 25px; text-align: center; width: 280px; box-shadow: var(--shadow-dark);">
-      <div style="font-size: 40px;">🥉</div>
-      <h3 style="color: #cd7f32; margin: 10px 0;">Rank 3</h3>
-      <p style="font-weight: bold; font-size: 20px; color: var(--purple);">Scholarship (₹5,000)</p>
-      <span style="font-size: 14px; color: #555;">+ Trophy</span>
-    </div>
-
-  </div>
-</section>
-
-
-<section class="section container" style="background: linear-gradient(135deg, #4F0A5A 0%, #32033a 100%); border-radius: 16px; color: white; padding: 40px 20px; max-width: 980px;">
-  <h2 style="text-align: center; color: #fff; margin-bottom: 30px; font-size: 28px;">🧠 एक Sample Question हल करें</h2>
-  
-  <div style="background: rgba(255,255,255,0.1); padding: 25px; border-radius: 12px; max-width: 600px; margin: 0 auto; border: 1px solid rgba(255,255,255,0.2);">
-    <p style="font-size: 18px; margin-bottom: 20px; color: white;"><strong>Q.</strong> यदि 'WATER' को 'XBUFS' लिखा जाता है, तो 'FIRE' को कैसे लिखा जाएगा?</p>
-    
-    <div id="quiz-options" style="display: grid; gap: 10px;">
-      <button onclick="checkAnswer(this, false)" style="padding: 12px; border-radius: 8px; border: none; background: white; cursor: pointer; text-align: left; font-weight: 500;">A) GJSF</button>
-      <button onclick="checkAnswer(this, false)" style="padding: 12px; border-radius: 8px; border: none; background: white; cursor: pointer; text-align: left; font-weight: 500;">B) GJQF</button>
-      <button onclick="checkAnswer(this, true)" style="padding: 12px; border-radius: 8px; border: none; background: white; cursor: pointer; text-align: left; font-weight: 500;">C) GJRI</button>
-      <button onclick="checkAnswer(this, false)" style="padding: 12px; border-radius: 8px; border: none; background: white; cursor: pointer; text-align: left; font-weight: 500;">D) HJSI</button>
-    </div>
-    
-    <div id="result-msg" style="margin-top: 15px; font-weight: bold; display: none; color: #fff;"></div>
-    <p style="font-size: 12px; margin-top: 10px; color: #ffebcd;">(Hint: +1, +0, +1, +0, ... Series)</p>
-  </div>
-</section>
-
-
-<section class="section">
-  <h2 style="text-align: center; font-size: 28px; margin-bottom: 30px;">हमारी प्रमुख विशेषताएँ</h2>
-  <div class="feature-grid">
-    <div class="feature-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Skills Icon">
-      <h3>21st Century Skills</h3>
-      <p>Logical Thinking, Reasoning, Scientific Aptitude और Analytical Skills पर आधारित assessment</p>
-    </div>
-    <div class="feature-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/3209/3209993.png" alt="MCQ Icon">
-      <h3>Standardized MCQ Framework</h3>
-      <p>NCERT-guided प्रश्न संरचना, national competition standards के अनुसार</p>
-    </div>
-    <div class="feature-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="Evaluation Icon">
-      <h3>Modern Evaluation</h3>
-      <p>AI-assisted scoring, OMR + online blended evaluation system</p>
-    </div>
-    <div class="feature-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135708.png" alt="Performance Icon">
-      <h3>Performance Insights</h3>
-      <p>Detailed skill report card जो आपकी strengths और growth areas बताता है</p>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <h2 style="text-align: center; font-size: 28px; margin-bottom: 30px;">यह Contest कैसे चलता है?</h2>
-  <div class="timeline container">
-    <div class="time-box">
-      <h3>1. Orientation</h3>
-      <p>Students को exam pattern और skill expectations समझाए जाते हैं।</p>
-    </div>
-    <div class="time-box">
-      <h3>2. Assessment</h3>
-      <p>Timed MCQs + Skill challenges (online/center-based).</p>
-    </div>
-    <div class="time-box">
-      <h3>3. Evaluation</h3>
-      <p>Standardized scoring + OMR validation.</p>
-    </div>
-    <div class="time-box">
-      <h3>4. Certification</h3>
-      <p>Skill-based report + national ranking shared digitally.</p>
-    </div>
-  </div>
-</section>
-
-<section class="section container">
-  <h2 style="text-align: center; font-size: 28px; margin-bottom: 30px;">📸 Glimpses of Past Contests</h2>
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px;">
-    <img src=https://i.postimg.cc/GtPPtFpg/Orbital-Winner-Lakshay.png" alt="Previous Winner Photo" style="width:100%; height:150px; object-fit: cover; border-radius: 8px; box-shadow: var(--shadow-light);" loading="lazy">
-    <img src="https://i.postimg.cc/KvqfM5Nt/Orbital-Ceremoney.png" alt="Contest Hall View" style="width:100%; height:150px; object-fit: cover; border-radius: 8px; box-shadow: var(--shadow-light);" loading="lazy">
-    <img src="https://i.postimg.cc/bNcDFSwV/Orbital-Prize-distribution.png" style="width:100%; height:150px; object-fit: cover; border-radius: 8px; box-shadow: var(--shadow-light);" loading="lazy">
-    <img src="https://i.postimg.cc/dt5FZggF/Orbital-Happy-Students.png" alt="Group of Happy Students" style="width:100%; height:150px; object-fit: cover; border-radius: 8px; box-shadow: var(--shadow-light);" loading="lazy">
-  </div>
-</section>
-
-
-<section class="section">
-  <h2 style="text-align: center; font-size: 28px; margin-bottom: 30px;">FAQs</h2>
-  <div class="faq-container">
-    <details>
-      <summary>क्या यह competition national level है?</summary>
-      <div class="faq-content">
-        <p>हाँ, पूरे भारत से विद्यार्थी इसमें हिस्सा लेते हैं। यह एक राष्ट्रीय स्तर का कौशल मूल्यांकन कार्यक्रम है।</p>
+  <section class="section container">
+    <h2 style="text-align: center; font-size: 28px; margin-bottom: 30px;">🏆 Grand Rewards Distribution</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+      
+      <div class="prize-card prize-gold" style="width: 280px;">
+        <div style="font-size: 40px;">🥇</div>
+        <h3>Rank 1 Winner</h3>
+        <p style="font-weight: bold; font-size: 20px; color: var(--purple);">Electric Scooty</p>
+        <span style="font-size: 14px; color: #555;">(Worth ₹75,000)</span>
       </div>
-    </details>
-    <details>
-      <summary>कौन eligible है?</summary>
-      <div class="faq-content">
-        <p>Class 9 से ऊपर के विद्यार्थी — अधिकतम आयु 25 वर्ष।</p>
-      </div>
-    </details>
-    <details>
-      <summary>Certificate कैसे मिलता है?</summary>
-      <div class="faq-content">
-        <p>Exam evaluation के बाद डिजिटल PDF के रूप में। Top rankers को प्रिंटेड सर्टिफिकेट और ट्रॉफी भी मिलती है।</p>
-      </div>
-    </details>
-  </div>
-</section>
 
-<section class="section text-center">
-  <a href="/Skill-Based-Contest/registration.html" class="btn" style="background: var(--purple); font-size: 22px; padding: 16px 40px; box-shadow: 0 8px 15px rgba(79, 10, 90, 0.3);">
-    अभी रजिस्टर करें और अपना करियर ट्रैक करें →
-  </a>
-</section>
+      <div class="prize-card prize-silver" style="width: 280px;">
+        <div style="font-size: 40px;">🥈</div>
+        <h3>Rank 2</h3>
+        <p style="font-weight: bold; font-size: 20px; color: var(--purple);">Smart Tablets</p>
+        <span style="font-size: 14px; color: #555;">+ Merit Certificate</span>
+      </div>
 
+      <div class="prize-card" style="width: 280px; border-color:#cd7f32;">
+        <div style="font-size: 40px;">🥉</div>
+        <h3 style="color:#cd7f32;">Rank 3</h3>
+        <p style="font-weight: bold; font-size: 20px; color: var(--purple);">Scholarship (₹5,000)</p>
+        <span style="font-size: 14px; color: #555;">+ Trophy</span>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section container" style="background: linear-gradient(135deg, #4F0A5A 0%, #32033a 100%); border-radius: 16px; color: white; padding: 40px 20px; max-width: 980px;">
+    <h2 style="text-align: center; color: #fff; margin-bottom: 30px; font-size: 28px;">🧠 एक Sample Question हल करें</h2>
+    
+    <div style="background: rgba(255,255,255,0.1); padding: 25px; border-radius: 12px; max-width: 600px; margin: 0 auto; border: 1px solid rgba(255,255,255,0.2);">
+      <p style="font-size: 18px; margin-bottom: 20px; color: white;"><strong>Q.</strong> यदि 'WATER' को 'XBUFS' लिखा जाता है, तो 'FIRE' को कैसे लिखा जाएगा?</p>
+      
+      <div id="quiz-options" style="display: grid; gap: 10px;">
+        <button class="quiz-option" onclick="checkAnswer(this, false)">A) GJSF</button>
+        <button class="quiz-option" onclick="checkAnswer(this, false)">B) GJQF</button>
+        <button class="quiz-option" onclick="checkAnswer(this, true)">C) GJRI</button>
+        <button class="quiz-option" onclick="checkAnswer(this, false)">D) HJSI</button>
+      </div>
+      
+      <div id="result-msg" style="margin-top: 15px; font-weight: bold; display: none; color: #fff;"></div>
+      <p style="font-size: 12px; margin-top: 10px; color: #ffebcd;">(Hint: +1, +0, +1, +0, ... Series)</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 style="text-align: center; font-size: 28px; margin-bottom: 30px;">हमारी प्रमुख विशेषताएँ</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Skills Icon">
+        <h3>21st Century Skills</h3>
+        <p>Logical Thinking, Reasoning, Scientific Aptitude और Analytical Skills पर आधारित assessment</p>
+      </div>
+      <div class="feature-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3209/3209993.png" alt="MCQ Icon">
+        <h3>Standardized MCQ Framework</h3>
+        <p>NCERT-guided प्रश्न संरचना, national competition standards के अनुसार</p>
+      </div>
+      <div class="feature-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="Evaluation Icon">
+        <h3>Modern Evaluation</h3>
+        <p>AI-assisted scoring, OMR + online blended evaluation system</p>
+      </div>
+      <div class="feature-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135708.png" alt="Performance Icon">
+        <h3>Performance Insights</h3>
+        <p>Detailed skill report card जो आपकी strengths और growth areas बताता है</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 style="text-align: center; font-size: 28px; margin-bottom: 30px;">यह Contest कैसे चलता है?</h2>
+    <div class="timeline container">
+      <div class="time-box">
+        <h3>1. Orientation</h3>
+        <p>Students को exam pattern और skill expectations समझाए जाते हैं।</p>
+      </div>
+      <div class="time-box">
+        <h3>2. Assessment</h3>
+        <p>Timed MCQs + Skill challenges (online/center-based).</p>
+      </div>
+      <div class="time-box">
+        <h3>3. Evaluation</h3>
+        <p>Standardized scoring + OMR validation.</p>
+      </div>
+      <div class="time-box">
+        <h3>4. Certification</h3>
+        <p>Skill-based report + national ranking shared digitally.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container">
+    <h2 style="text-align: center; font-size: 28px; margin-bottom: 30px;">📸 Glimpses of Past Contests</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px;">
+      <img src="https://i.postimg.cc/GtPPtFpg/Orbital-Winner-Lakshay.png" alt="Previous Winner Photo" style="width:100%; height:150px; object-fit: cover; border-radius: 8px; box-shadow: var(--shadow-light);" loading="lazy">
+      <img src="https://i.postimg.cc/KvqfM5Nt/Orbital-Ceremoney.png" alt="Contest Hall View" style="width:100%; height:150px; object-fit: cover; border-radius: 8px; box-shadow: var(--shadow-light);" loading="lazy">
+      <img src="https://i.postimg.cc/bNcDFSwV/Orbital-Prize-distribution.png" alt="Prize Distribution" style="width:100%; height:150px; object-fit: cover; border-radius: 8px; box-shadow: var(--shadow-light);" loading="lazy">
+      <img src="https://i.postimg.cc/dt5FZggF/Orbital-Happy-Students.png" alt="Group of Happy Students" style="width:100%; height:150px; object-fit: cover; border-radius: 8px; box-shadow: var(--shadow-light);" loading="lazy">
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 style="text-align: center; font-size: 28px; margin-bottom: 30px;">FAQs</h2>
+    <div class="faq-container">
+      <details>
+        <summary>क्या यह competition national level है?</summary>
+        <div class="faq-content">
+          <p>हाँ, पूरे भारत से विद्यार्थी इसमें हिस्सा लेते हैं। यह एक राष्ट्रीय स्तर का कौशल मूल्यांकन कार्यक्रम है।</p>
+        </div>
+      </details>
+      <details>
+        <summary>कौन eligible है?</summary>
+        <div class="faq-content">
+          <p>Class 9 से ऊपर के विद्यार्थी — अधिकतम आयु 25 वर्ष।</p>
+        </div>
+      </details>
+      <details>
+        <summary>Certificate कैसे मिलता है?</summary>
+        <div class="faq-content">
+          <p>Exam evaluation के बाद डिजिटल PDF के रूप में। Top rankers को प्रिंटेड सर्टिफिकेट और ट्रॉफी भी मिलती है।</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section class="section text-center">
+    <a href="/Skill-Based-Contest/registration.html" class="btn btn--purple" style="font-size: 22px; padding: 16px 40px;">
+      अभी रजिस्टर करें और अपना करियर ट्रैक करें →
+    </a>
+  </section>
+</main>
 
 <footer>
   <div class="container">
@@ -380,7 +434,10 @@
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="30" alt="WhatsApp">
 </a>
 
-<div style="height: 65px;"></div> <div style="
+<div style="height: 65px;"></div>
+
+<!-- Bottom sticky bar -->
+<div style="
   position: fixed; 
   bottom: 0; 
   left: 0; 
@@ -397,21 +454,12 @@
     <span style="display: block; font-size: 12px; color: #555;">Mega Contest:</span>
     <span style="font-weight: bold; color: var(--purple);">Electric Scooty Win!</span>
   </div>
-  <a href="/Skill-Based-Contest/registration.html" style="
-    background: #28a745; 
-    color: white; 
-    padding: 10px 20px; 
-    border-radius: 50px; 
-    text-decoration: none; 
-    font-weight: bold;
-    font-size: 15px;
-    box-shadow: 0 4px 10px rgba(40,167,69,0.3);
-  ">
+  <a href="/Skill-Based-Contest/registration.html" class="green-btn">
     REGISTER NOW
   </a>
 </div>
 
-
+<!-- Live notification box -->
 <div id="live-notification" style="
   position: fixed;
   bottom: 80px;
@@ -438,7 +486,6 @@
   </div>
 </div>
 
-
 <script>
 // Quiz Functionality
 function checkAnswer(btn, isCorrect) {
@@ -448,27 +495,16 @@ function checkAnswer(btn, isCorrect) {
   const msg = document.getElementById('result-msg');
   msg.style.display = 'block';
   
-  // Correct answer for 'FIRE' (F+1=G, I+0=J, R+1=S, E+0=I) -> Correction: R+1=S, E+0=E. Let's use simpler logic: F+1=G, I+1=J, R+1=S, E+1=F. (GJSF)
-  // Based on the question's logic (+1, +0, +1, +0, ...):
-  // W(+1) = X
-  // A(+0) = A (Typo in original code, assumed +1, -1, +1, -1 or similar. Following the provided correct answer logic C for the purpose of the code)
-  // T(+1) = U
-  // E(+0) = E
-  // R(+1) = S
-  // Q. 'WATER' (W, A, T, E, R) is 'XBUFS' (X, B, U, F, S). This is (+1, +1, +1, +1, +1).
-  // The user code suggests C: GJRI is correct. Let's stick to the code's intended correct answer C.
-
   if(isCorrect) {
     btn.style.background = '#28a745';
     btn.style.color = 'white';
-    msg.innerHTML = "✅ **Correct!** आपकी तार्किक क्षमता शानदार है। <a href='/Skill-Based-Contest/registration.html' style='color:#ffb703'>अभी रजिस्टर करें</a>";
+    msg.innerHTML = "✅ <strong>Correct!</strong> आपकी तार्किक क्षमता शानदार है। <a href='/Skill-Based-Contest/registration.html' style='color:#ffb703'>अभी रजिस्टर करें</a>";
   } else {
     btn.style.background = '#dc3545';
     btn.style.color = 'white';
     const correctBtn = document.querySelector('#quiz-options button:nth-child(3)');
-    correctBtn.style.background = '#007bff';
-    correctBtn.style.color = 'white';
-    msg.innerHTML = "❌ **Oops!** सही उत्तर C है। (Logic: +1 for each letter). अपनी skills को परखने के लिए रजिस्टर करें!";
+    if (correctBtn) { correctBtn.style.background = '#007bff'; correctBtn.style.color = 'white'; }
+    msg.innerHTML = "❌ <strong>Oops!</strong> सही उत्तर C है। (Logic: +1 for each letter). अपनी skills को परखने के लिए रजिस्टर करें!";
   }
 }
 
@@ -479,13 +515,14 @@ const text = document.getElementById('notif-text');
 
 function showNotification() {
   const randomName = names[Math.floor(Math.random() * names.length)];
-  text.innerText = randomName + " just registered.";
+  if (text) text.innerText = randomName + " just registered.";
   
-  notif.style.transform = "translateX(0)";
-  
-  setTimeout(() => {
-    notif.style.transform = "translateX(-150%)";
-  }, 4000);
+  if (notif) {
+    notif.style.transform = "translateX(0)";
+    setTimeout(() => {
+      notif.style.transform = "translateX(-150%)";
+    }, 4000);
+  }
 }
 
 // Show notification every 10 to 20 seconds
@@ -502,7 +539,6 @@ function scheduleNextNotification() {
 
 // Start the sequence after a short delay
 setTimeout(scheduleNextNotification, 3000);
-
 
 // Simple Countdown Script (Optional)
 // Set the date we're counting down to (Example: April 1, 2026)
