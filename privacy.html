@@ -148,11 +148,16 @@
         <p>हम समय-समय पर इस Policy को अपडेट कर सकते हैं। सभी बदलाव इस पेज पर प्रकाशित होंगे और Effective Date को अपडेट किया जाएगा। महत्वपूर्ण परिवर्तन होने पर हम registered users को email द्वारा सूचित कर सकते हैं।</p>
       </section>
 
-      <footer>
-        <p style="margin-top:14px;font-size:13px;color:#555">
-          Data Controller: Orbital Skill Development Institute • Email: <a href="mailto:info@orbital4u.example">osi@ftbh.onmicrosoft.com</a> • Jurisdiction: India
-        </p>
-      </footer>
+      <footer style="text-align:center; padding:20px; margin-top:30px; font-size:14px; color:#444;">
+  © <span id="year"></span> Orbital Skill Development Institute —
+  <a href="/Skill-Based-Contest/privacy.html">Privacy</a> |
+  <a href="/Skill-Based-Contest/terms.html">Terms</a> |
+  <a href="/Skill-Based-Contest/contact.html">Contact</a>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
     </article>
   </main>
 </body>
