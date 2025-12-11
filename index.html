@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="hi">
 <head>
@@ -21,13 +22,42 @@
 
   <!-- Preconnects -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+
+
+<!-- Preconnect for image hosts -->
+<link rel="preconnect" href="https://i.postimg.cc" crossorigin>
+<link rel="preconnect" href="https://cdn-icons-png.flaticon.com" crossorigin>
+<link rel="preconnect" href="https://upload.wikimedia.org" crossorigin>
 
 <!-- Non-blocking Google Fonts load -->
 <link rel="preload" as="style"
-  href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Noto+Sans:wght@400;500;700&display=swap"
+  href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Noto+Sans:wght@400;500;700&display=swap&subset=devanagari"
   onload="this.onload=null;this.rel='stylesheet'">
 <noscript>
+    
+      <!-- Deferred analytics (kept in head using idle callback) -->
+  <script>
+    function loadGtag(){
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = "https://www.googletagmanager.com/gtag/js?id=G-E9DF1J8JYG";
+      document.head.appendChild(s);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', 'G-E9DF1J8JYG');
+    }
+
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(loadGtag, {timeout: 3000});
+    } else {
+      setTimeout(loadGtag, 2500);
+    }
+  </script>
+  
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 </noscript>
   <script type="application/ld+json">
@@ -43,13 +73,27 @@
   }
   </script>
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E9DF1J8JYG"></script>
   <script>
+  function loadGtag(){
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-E9DF1J8JYG";
+    document.head.appendChild(s);
+
     window.dataLayer = window.dataLayer || [];
     function gtag(){ dataLayer.push(arguments); }
+    window.gtag = gtag;
     gtag('js', new Date());
     gtag('config', 'G-E9DF1J8JYG');
-  </script>
+  }
+
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(loadGtag, {timeout: 3000});
+  } else {
+    setTimeout(loadGtag, 2500);
+  }
+</script>
+
 
   <style>
   :root { 
@@ -246,22 +290,22 @@
     padding:0 14px;
   ">
     <a href="/Skill-Based-Contest/" style="color:white; font-size:20px; font-weight:700; text-decoration:none;">
-      Orbital Skill
+      
     </a>
+<div class="nav-links" style="display:flex; gap:18px;">
+  <a href="/Skill-Based-Contest/">Home</a>
+  <a href="/Skill-Based-Contest/registration.html">Registration</a>
+  <a href="/Skill-Based-Contest/about.html">About</a>
+    <a href="/Skill-Based-Contest/contact.html">Contact</a>
+  <a href="/Skill-Based-Contest/terms.html">Terms</a>
+  <a href="/Skill-Based-Contest/privacy.html">Privacy</a>
+</div>
 
-    <div style="display:flex; gap:18px;">
-      <a href="/Skill-Based-Contest/" style="color:white; text-decoration:none;">Home</a>
-      <a href="/Skill-Based-Contest/about.html" style="color:white; text-decoration:none;">About</a>
-      <a href="/Skill-Based-Contest/registration.html" style="color:white; text-decoration:none;">Registration</a>
-      <a href="/Skill-Based-Contest/contact.html" style="color:white; text-decoration:none;">Contact</a>
-      <a href="/Skill-Based-Contest/terms.html" style="color:white; text-decoration:none;">Terms</a>
-      <a href="/Skill-Based-Contest/privacy.html" style="color:white; text-decoration:none;">Privacy</a>
-    </div>
   </div>
 </nav>
 <header>
   <div class="container" style="max-width: 1100px;">
-    <img src="https://i.postimg.cc/W3K3rLSp/skill.webp alt="Skill Based Contest banner" class="header-img">
+    <img src="https://i.postimg.cc/W3K3rLSp/skill.webp" alt="Skill Based Contest banner" class="header-img">
     <p class="summary-note">Skill Contest में हिस्सा लेकर पाएं मौका — <strong>Electric Scooty (₹75,000)</strong> जीतने का!</p>
     
     <div style="background: linear-gradient(90deg, #ffb703, #fb8500); padding: 15px; text-align: center; margin: 20px auto; max-width: 980px; border-radius: 10px; color: #000; box-shadow: var(--shadow-dark);">
@@ -343,7 +387,7 @@
     <h2 style="text-align: center; font-size: 28px; margin-bottom: 30px;">हमारी प्रमुख विशेषताएँ</h2>
     <div class="feature-grid">
       <div class="feature-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Skills Icon">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Skills Icon" width="105" height="65" loading="lazy" decoding="async">
         <h3>21st Century Skills</h3>
         <p>Logical Thinking, Reasoning, Scientific Aptitude और Analytical Skills पर आधारित assessment</p>
       </div>
@@ -390,9 +434,9 @@
   <section class="section container">
     <h2 style="text-align: center; font-size: 28px; margin-bottom: 30px;">📸 Glimpses of Past Contests</h2>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px;">
-      <img src="https://i.postimg.cc/nzVSyM83/Orbital-Winner-Lakshay.webp " alt="Previous Winner Lakshay Photo" style="width:100%; height:150px; object-fit: cover; border-radius: 8px; box-shadow: var(--shadow-light);" loading="lazy">
+      <img src="https://i.postimg.cc/nzVSyM83/Orbital-Winner-Lakshay.webp" alt="Previous Winner Lakshay Photo" style="width:100%; height:150px; object-fit: cover; border-radius: 8px; box-shadow: var(--shadow-light);" loading="lazy">
       <img src="https://i.postimg.cc/26CgC2Wc/Orbital-Ceremoney.webp" alt="Ceremoney Hall View" style="width:100%; height:150px; object-fit: cover; border-radius: 8px; box-shadow: var(--shadow-light);" loading="lazy">
-      <img src="https://i.postimg.cc/X7DWQSCt/Orbital-Prize-distribution.webp  " alt="Prize Distribution" style="width:100%; height:150px; object-fit: cover; border-radius: 8px; box-shadow: var(--shadow-light);" loading="lazy">
+      <img src="https://i.postimg.cc/X7DWQSCt/Orbital-Prize-distribution.webp" alt="Prize Distribution" style="width:100%; height:150px; object-fit: cover; border-radius: 8px; box-shadow: var(--shadow-light);" loading="lazy">
       <img src="https://i.postimg.cc/RFcCDsBT/Orbital-Happy-Students.webp" alt="Group of Happy Students" style="width:100%; height:150px; object-fit: cover; border-radius: 8px; box-shadow: var(--shadow-light);" loading="lazy">
     </div>
   </section>
