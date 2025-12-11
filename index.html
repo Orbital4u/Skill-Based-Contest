@@ -19,8 +19,17 @@
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="hi_IN" />
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Preconnects -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+<!-- Non-blocking Google Fonts load -->
+<link rel="preload" as="style"
+  href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Noto+Sans:wght@400;500;700&display=swap"
+  onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+</noscript>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
