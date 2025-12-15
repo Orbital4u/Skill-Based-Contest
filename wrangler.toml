@@ -1,0 +1,15 @@
+name = "skills"
+main = "src/worker.js"
+compatibility_date = "2025-12-15"
+workers_dev = true
+
+# अगर बाद में KV/R2/D1/Durable Objects वगैरह जोड़ने हों तो नीचे सेक्शन जोड़ सकते हैं।
+# उदाहरण:
+# [[kv_namespaces]]
+# binding = "MY_KV"
+# id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+
+# Routes (custom domain पर publish करने के लिए):
+# routes = [
+#   { pattern = "example.com/*", zone_name = "example.com" }
+# ]
