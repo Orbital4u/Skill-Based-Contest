@@ -1,0 +1,3 @@
+[build]
+command = "rm -f wrangler.jsonc && npm ci && npm run deploy"
+publish = "."
