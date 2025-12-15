@@ -6,3 +6,4 @@
 
   // अगर आप workers.dev subdomain पर चलाना चाहते हैं:
   "workers_dev": true
+}
