@@ -1,0 +1,44 @@
+name: Deploy Cloudflare Worker
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - '**/*.js'
+      - '**/*.ts'
+      - 'wrangler.toml'
+      - 'package.json'
+      - '.github/workflows/workflow.yml'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Remove wrangler.jsonc if present (safety)
+        run: |
+          rm -f wrangler.jsonc
+
+      - name: Install dependencies (clean)
+        run: |
+          npm install
+
+      - name: Deploy with Wrangler
+        run: |
+          npx wrangler deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+
+      - name: Post-deploy info
+        run: |
+          echo "Deployment triggered via GitHub Actions at $(date -u)"
