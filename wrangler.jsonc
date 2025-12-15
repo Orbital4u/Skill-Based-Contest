@@ -1,8 +1,0 @@
-
-{
-  "name": "skills",
-  "main": "src/worker.js",
-  "compatibility_date": "2025-12-15",
-  "workers_dev": true
-}
-
