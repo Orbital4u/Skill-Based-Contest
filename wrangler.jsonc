@@ -1,9 +1,8 @@
 
 {
-  "name": "skills",                      
-  "main": "src/worker.js",                 
-  "compatibility_date": "2025-12-15",     
-
-  // अगर आप workers.dev subdomain पर चलाना चाहते हैं:
+  "name": "skills",
+  "main": "src/worker.js",
+  "compatibility_date": "2025-12-15",
   "workers_dev": true
 }
+
