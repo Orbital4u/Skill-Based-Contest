@@ -1,479 +1,307 @@
 <!doctype html>
 <html lang="hi">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#4F0A5A" />
-  <title>Register — Skill Based Contest 2025 | Orbital Skill Development</title>
-  
-  <meta name="description" content="Register for Skill Based Contest 2025. Simple steps: Pay ₹750 (UPI/QR), fill registration form & upload payment screenshot. Secure payment, instant confirmation & Merit certificate assured." />
+
+  <title>Official Registration | Mega Skill Based Contest 2025</title>
+  <meta name="description" content="Official Registration Portal for Mega Skill Based Contest 2025. Transparent 2-step process: Entry fee payment followed by secure registration form submission." />
+
   <link rel="canonical" href="https://orbital4u.github.io/Skill-Based-Contest/registration.html" />
   <meta name="robots" content="index,follow" />
 
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-
-
   <style>
-    /* 1. Base Variables & Reset */
-    :root { 
-      --accent: #4F0A5A; /* Deep Purple */
-      --secondary: #FB8500; /* Vibrant Orange */
-      --cta: #28A745; /* Green CTA */
-      --bg: #F0F4F8; /* Light Sky Background */
-      --text: #1E293B;
-      --shadow-high: 0 15px 35px rgba(0,0,0,0.15); /* Stronger Shadow */
-      --shadow-low: 0 5px 15px rgba(0,0,0,0.08);
-      --radius-l: 16px;
-      --radius-s: 10px;
+    :root{
+      --brand:#4F0A5A;
+      --accent:#F2CFEE;
+      --text:#222;
+      --bg:#ffffff;
+      --cta:#1e7e34;
+      --border:#e5e7eb;
     }
-    
-    * { box-sizing: border-box; }
-    
-    body {
-      font-family: 'Noto Sans', sans-serif;
-      background: var(--bg);
-      margin: 0;
-      color: var(--text);
-      line-height: 1.6;
-    }
-    
-    h1, h2, h3 { 
-      font-family: 'Montserrat', sans-serif; 
-      color: var(--accent); 
-      font-weight: 700;
-    }
-    a { text-decoration: none; transition: 0.3s; }
-    
-    /* 2. Layout & Card Design */
-    .wrap { max-width: 950px; margin: 25px auto; padding: 0 15px; }
-    .card { 
-      background: #fff; 
-      padding: 35px; 
-      border-radius: var(--radius-l); 
-      box-shadow: var(--shadow-high); 
-      border-top: 5px solid var(--secondary);
-    }
-    
-    /* Header/Title */
-    header { display: flex; align-items: center; gap: 15px; margin-bottom: 25px; }
-    .logo { 
-      width: 90px; 
-      height: 90px; 
-      border-radius: var(--radius-s); 
-      object-fit: cover; 
-      box-shadow: var(--shadow-low);
-    }
-    h1 { margin: 0; font-size: 30px; font-weight: 800; }
-    p.lead { margin: 5px 0 0; font-size: 17px; color: #4b5563; font-weight: 500; }
-    
-    /* 3. CTA Buttons */
-    .btn {
-      display: block; 
-      background: var(--cta); 
-      color: #fff; 
-      padding: 15px 25px; 
-      border-radius: 50px; 
-      font-weight: 700; 
-      text-align: center;
-      font-size: 17px;
-      box-shadow: 0 8px 20px rgba(40,167,69,0.4);
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .btn:hover { transform: translateY(-3px); box-shadow: 0 12px 25px rgba(40,167,69,0.5); }
-    
-    .btn.form-btn { 
-      background: linear-gradient(90deg, var(--accent), #6A1B9A); 
-      box-shadow: 0 8px 20px rgba(79,10,90,0.4); 
-    }
-    .btn.form-btn:hover { 
-      box-shadow: 0 12px 25px rgba(79,10,90,0.6); 
-    }
-    
-    /* 4. Steps Grid & Payment Highlight */
-    .steps { 
-      display: grid; 
-      grid-template-columns: 1fr 1fr;
-      gap: 30px; 
-      margin-top: 30px; 
-    }
-    .step { 
-      padding: 30px; 
-      border-radius: var(--radius-l); 
-      background: #fff; 
-      border: 1px solid #E5E7EB;
-      box-shadow: var(--shadow-low);
-    }
-    .step h3 { 
-      margin: 0 0 15px; 
-      font-size: 22px; 
-      color: var(--accent); 
-      border-bottom: 2px dashed var(--secondary);
-      padding-bottom: 10px;
-    }
-    
-    .payment-highlight {
-      background: linear-gradient(90deg, var(--secondary), #FFC300); 
-      color: #111;
-      padding: 18px; 
-      border-radius: var(--radius-s);
-      margin-bottom: 20px;
-      font-size: 20px;
-      font-weight: 800;
-      text-align: center;
-    }
-    .qr { text-align: center; margin-top: 20px; }
-    .qr img { 
-      width: 200px; 
-      border-radius: var(--radius-s); 
-      border: 6px solid #fff; 
-      box-shadow: 0 5px 20px rgba(0,0,0,0.2); 
-    }
-    .upi-link { margin-top: 20px; }
-    
-    /* Trust & Support */
-    .trust { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 25px; justify-content: center; }
-    .trust .item { 
-      background: #E8F5E9; 
-      color: #1B5E20; 
-      padding: 8px 15px; 
-      border-radius: 50px; 
-      font-size: 14px; 
-      font-weight: 600; 
-      border: 1px solid #A5D6A7;
-    }
-    .support { 
-      background: #FFFBEA; 
-      border-left: 6px solid var(--secondary); 
-      padding: 18px; 
-      border-radius: var(--radius-s); 
-      margin-top: 30px; 
-      font-size: 15px;
-    }
-    .support a { color: var(--accent); font-weight: 700; }
-    
-    /* Guidelines & FAQ Styling */
-    .guide-section {
-        margin-top: 40px; 
-        padding: 30px; 
-        background: #fff; 
-        border-radius: var(--radius-l); 
-        box-shadow: var(--shadow-low);
-    }
-    .guide-section h2 {
-        font-size:24px; 
-        color: var(--accent); 
-        border-bottom: 2px solid #E5E7EB; 
-        padding-bottom: 10px; 
-        margin-bottom: 20px;
-    }
-    .guide-section ol { padding-left: 20px; list-style-type: decimal; font-size: 16px; margin: 0; }
-    .guide-section ol li { margin-bottom: 12px; }
-    .rules {
-        background: #FFFBEA; 
-        border: 1px solid var(--secondary); 
-        border-radius: 10px; 
-        padding: 18px; 
-        margin-top: 25px;
-    }
-    .rules h2 {
-        font-size:20px; 
-        color: var(--secondary); 
-        margin: 0 0 10px; 
-        padding: 0; 
-        border-bottom: none;
-    }
-    .faq-container { margin-top: 20px; }
-    .faq-item { margin-bottom: 20px; padding: 10px; border-bottom: 1px dashed #DDD; }
-    .faq-item strong { color: var(--accent); font-weight: 700; display: block; margin-bottom: 5px; }
 
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.65;
+    }
 
-    /* Footer */
-    footer { 
-      background: var(--accent); 
-      color: #fff; 
-      padding: 25px 0; 
-      text-align: center; 
-      margin-top: 40px; 
-      font-size: 14px; 
-    }
-    footer a { color: #FFEBCC; font-weight: 500; }
+    a{color:var(--brand);text-decoration:none}
 
-    /* Navigation Bar (Clean & Simple) */
-    nav{ background:var(--accent); padding:12px 0; position:sticky; top:0; z-index:1000; box-shadow:0 3px 10px rgba(0,0,0,0.15); }
-    .nav-container{ max-width:1100px; margin:auto; display:flex; justify-content:center; align-items:center; padding:0 14px; }
-    .logo-nav{ color:white; font-size:24px; font-weight:800; }
-    
-    /* 5. LIVE REGISTRATION POPUP CSS */
-    #live-notification {
-      position: fixed;
-      bottom: 20px;
-      left: 20px;
-      background: white;
-      padding: 15px;
-      border-radius: var(--radius-s);
-      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      z-index: 9999;
-      transform: translateX(-150%); /* Start off-screen */
-      transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Bounce effect */
-      border-left: 5px solid var(--cta);
-      max-width: 280px;
+    /* NAV */
+    nav{
+      background:var(--brand);
+      padding:10px 0;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      box-shadow:0 3px 10px rgba(0,0,0,.15);
     }
-    .notif-icon {
-        background: #e8f5e9;
-        padding: 8px;
-        border-radius: 50%;
-        font-size: 18px;
-        line-height: 1;
+    .nav-inner{
+      max-width:1100px;
+      margin:auto;
+      display:flex;
+      justify-content:space-between;
+      padding:0 14px;
+      align-items:center;
     }
-    
-    /* Mobile Responsive */
-    @media(max-width:768px){
-      .steps{grid-template-columns:1fr; gap: 25px;}
-      h1{font-size:24px;}
-      .logo{width:70px;height:70px;}
-      .card{padding:20px; margin-top: 15px;}
-      .qr img{width:150px;}
-      .payment-highlight{font-size: 18px; padding: 14px;}
-      .btn{font-size: 16px; padding: 14px 20px;}
-      .nav-container { justify-content: center; }
-      #live-notification {
-        left: 50%;
-        transform: translate(-50%, 150%);
-        bottom: 10px;
-      }
+    .nav-inner a{color:#fff;margin-left:16px;font-weight:500}
+    .brand{font-weight:700;font-size:20px}
+
+    /* HERO */
+    .hero{
+      background:linear-gradient(180deg,var(--accent),#fff);
+      padding:2rem 1rem;
     }
+    .container{max-width:1000px;margin:auto;padding:0 1rem}
+    .hero h1{margin:.3rem 0;font-size:1.9rem}
+    .sub{color:#444}
+
+    /* SECTIONS */
+    .section{margin-top:2rem}
+    .section h2{font-size:1.4rem;margin-bottom:.6rem}
+
+    .card{
+      border:1px solid var(--border);
+      border-radius:.75rem;
+      padding:1.25rem;
+      background:#fff;
+      margin-top:1rem;
+    }
+
+    /* PROCESS */
+    .process{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:1rem;
+    }
+
+    .highlight{
+      background:#fff7ed;
+      border:1px solid #fed7aa;
+      border-radius:.6rem;
+      padding:.9rem;
+      font-weight:600;
+      text-align:center;
+    }
+
+    .btn{
+      display:inline-block;
+      background:var(--cta);
+      color:#fff;
+      padding:.65rem 1rem;
+      border-radius:.5rem;
+      font-weight:600;
+    }
+
+    /* EMBED */
+    .embed-wrap{
+      margin-top:1rem;
+      border:1px solid var(--border);
+      border-radius:.75rem;
+      overflow:hidden;
+    }
+    iframe{
+      width:100%;
+      min-height:1000px;
+      border:0;
+    }
+
+    /* LIST */
+    ul.check{
+      list-style:none;
+      padding-left:0;
+    }
+    ul.check li{
+      padding-left:1.2em;
+      position:relative;
+      margin-bottom:.4rem;
+    }
+    ul.check li::before{
+      content:"✔";
+      position:absolute;
+      left:0;
+      color:#0a7b25;
+    }
+
+    /* FOOTER */
+    footer{
+      margin-top:3rem;
+      background:var(--brand);
+      color:#fff;
+    }
+    footer a{color:#F2CFEE}
+    .footer-inner{
+      max-width:1000px;
+      margin:auto;
+      padding:1.2rem;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:1rem;
+    }
+    small{display:block;text-align:center;padding:.8rem 0}
   </style>
 </head>
-<body>
- <!-- NAVIGATION BAR -->
-<nav style="
-  width:100%;
-  background:#4F0A5A;
-  padding:10px 0;
-  position:sticky;
-  top:0;
-  z-index:1000;
-  box-shadow:0 3px 10px rgba(0,0,0,0.15);
-">
-  <div style="
-    max-width:1100px;
-    margin:auto;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:0 14px;
-  ">
-    <a href="/Skill-Based-Contest/" style="color:white; font-size:20px; font-weight:700; text-decoration:none;">
-      Orbital Skill
-    </a>
 
-    <div style="display:flex; gap:18px;">
-      <a href="/Skill-Based-Contest/" style="color:white; text-decoration:none;">Home</a>
-      <a href="/Skill-Based-Contest/about.html" style="color:white; text-decoration:none;">About</a>
-      <a href="/Skill-Based-Contest/registration.html" style="color:white; text-decoration:none;">Registration</a>
-      <a href="/Skill-Based-Contest/contact.html" style="color:white; text-decoration:none;">Contact</a>
-      <a href="/Skill-Based-Contest/terms.html" style="color:white; text-decoration:none;">Terms</a>
-      <a href="/Skill-Based-Contest/privacy.html" style="color:white; text-decoration:none;">Privacy</a>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="/Skill-Based-Contest/" class="brand">Orbital Skill</a>
+    <div>
+      <a href="/Skill-Based-Contest/">Home</a>
+      <a href="/Skill-Based-Contest/about.html">About</a>
+      <a href="/Skill-Based-Contest/registration.html">Registration</a>
+      <a href="/Skill-Based-Contest/contact.html">Contact</a>
+      <a href="/Skill-Based-Contest/terms.html">Terms</a>
+      <a href="/Skill-Based-Contest/privacy.html">Privacy</a>
     </div>
   </div>
 </nav>
-  <main class="wrap">
-    <article class="card" aria-labelledby="reg-heading">
-      <header>
-        <img src="https://i.postimg.cc/7h8GCJxm/Logo.webp" class="logo" />
-        <div>
-          <h1 id="reg-heading">Mega Quiz Contest 2025-26:- Registration Starts!</h1>
-          <p class="lead">
-            अपनी Registration सुनिश्चित करें। सरल 2-चरणीय प्रक्रिया: **1. पेमेंट → 2.फॉर्म भरें**।
-            Merit, Rank और ₹75,000 के पुरस्कारों के लिए तैयार हो जाएँ!
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <p class="sub">Mega Skill Based Contest 2025</p>
+    <h1>Official Registration Portal</h1>
+    <p>
+      यह पृष्ठ Mega Skill Based Contest के लिए
+      <strong>आधिकारिक पंजीकरण प्रक्रिया</strong> को दर्शाता है।
+      प्रक्रिया पारदर्शी, मेरिट-आधारित और स्पष्ट रूप से परिभाषित है।
+    </p>
+  </div>
+</section>
+
+<main class="container">
+
+  <!-- PROCESS -->
+  <section class="section">
+    <h2>Registration Process</h2>
+    <div class="process">
+
+      <!-- STEP 1 -->
+      <div class="card">
+        <h3>Step 1 — Entry Fee Payment</h3>
+
+        <div class="highlight">₹750 (Non-Refundable)</div>
+
+        <p>
+          Entry fee Organizer (<strong>Harmeet Singh</strong>) के नाम पर
+          Mega Skill Based Contest के registration उद्देश्य हेतु ली जाती है।
+        </p>
+
+        <p>
+          यह एक <strong>company-supported independent initiative</strong> है,
+          जिसे <strong>Orbital Studies & Immigration Pvt. Ltd.</strong>
+          administrative support प्रदान करती है।
+        </p>
+
+        <p><strong>UPI ID:</strong> hmt2cu@okaxis</p>
+
+        <a class="btn" href="upi://pay?pa=hmt2cu@okaxis&pn=Harmeet Singh&am=750&cu=INR">
+          Proceed to UPI Payment (₹750)
+        </a>
+
+        <!-- QR CODE -->
+        <div style="margin-top:1rem;text-align:center">
+          <img 
+            src="https://i.postimg.cc/85RqLxRF/750-qr.webp"
+            alt="UPI QR Code for Mega Skill Based Contest Registration"
+            style="max-width:180px;border:1px solid #e5e7eb;border-radius:.5rem;padding:.4rem;background:#fff"
+          />
+          <p style="font-size:.85rem;color:#555;margin-top:.4rem">
+            Scan QR to pay ₹750 via any UPI app
           </p>
         </div>
-      </header>
 
-      <div class="trust" role="list">
-        <div class="item" role="listitem">🏆 ₹75,000 Prize Pool</div>
-        <div class="item" role="listitem">✅ Instant Confirmation</div>
-        <div class="item" role="listitem">🔒 100% Secure UPI Payment</div>
-        <div class="item" role="listitem">📜 Merit Certificate</div>
+        <p style="font-size:.85rem;color:#555;margin-top:.5rem">
+          *Payment screenshot सुरक्षित रखें — अगले चरण में आवश्यक है।
+        </p>
       </div>
 
+      <!-- STEP 2 -->
+      <div class="card">
+        <h3>Step 2 — Registration Form</h3>
 
-      <section aria-labelledby="how-heading">
-        <h2 id="how-heading" style="font-size:28px;margin:30px 0 20px;color:#111;text-align: center;">सिर्फ 2 चरणों में पंजीकरण पूरा करें!</h2>
-        
-        <div class="steps" role="list">
-          
-          <div class="step" role="listitem">
-            <h3>1. 💵 Entry Fee का भुगतान करें</h3>
-            
-            <div class="payment-highlight">
-              Entry Fee: ₹750 (Non-Refundable)
-            </div>
-            
-            <div class="qr" aria-hidden="false">
-              <img src="https://i.postimg.cc/85RqLxRF/750-qr.webp" alt="UPI QR code for ₹750">
-            </div>
-            
-            <p style="font-size: 14px; margin: 15px 0 10px; text-align: center; font-weight: 600;">UPI ID: <code style="color:var(--accent);">hmt2cu@okaxis</code></p>
-            
-            <div class="upi-link">
-              <a class="btn" href="upi://pay?pa=hmt2cu@okaxis&pn=Harmeet Singh&am=750&cu=INR">📲 UPI App से ₹750 Pay करें</a>
-            </div>
+        <p>
+          Payment के बाद नीचे दिया गया registration form भरें।
+          सभी जानकारी सही और पूर्ण होना आवश्यक है।
+        </p>
 
-            <p class="note" style="margin-top: 15px; font-size: 13px; text-align: center; color: #777;">
-              *Payment Screenshot अवश्य लें। यह अगले चरण में आवश्यक है।
-            </p>
-          </div>
+        <ul class="check">
+          <li>Payment screenshot upload</li>
+          <li>Valid contact details</li>
+          <li>Correct academic information</li>
+        </ul>
 
-          <div class="step" role="listitem">
-            <h3>2. 📝 Google Form भरें</h3>
-            
-            <p style="font-size: 16px; margin-top: 0;">
-              भुगतान करने के बाद, फॉर्म खोलें। इसमें **Payment Screenshot** और अपनी सभी सही जानकारी भरें और Documents Upload करें।
-            </p>
-            
-            <div style="margin-top:25px; text-align: center;">
-              <a class="btn form-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSdiTTdVVCj2LeO0F0QB8-PylfsDMAd-EY75LFXUxACoE49R8Q/viewform" target="_blank" rel="noopener" style="max-width: 320px;">
-                रजिस्ट्रेशन फॉर्म खोलें →
-              </a>
-            </div>
-             <div class="qr" aria-hidden="false">
-              <img src="https://i.postimg.cc/RCfcL4Jj/G-Form1.jpg" alt="G-Form">
-            </div>
-            
-            <p class="note" style="margin-top: 25px; font-size: 14px; text-align: center; color: #555;">
-              Registration ID और Confirmation 24 घंटे में आपके Email पर भेजा जाएगा।
-            </p>
-          </div>
-          
-        </div>
-      </section>
-            <section class="guide-section" id="guidelines" aria-labelledby="guidelines-heading">
-        <h2 id="guidelines-heading">📌 Skill Test Guidelines</h2>
-        <ol style="padding-left: 20px; list-style-type: decimal; font-size: 16px;">
-          <li style="margin-bottom: 12px;">सभी प्रतिभागियों को लिखित/ऑनलाइन परीक्षा देना आवश्यक है।</li>
-          <li style="margin-bottom: 12px;">परीक्षा में NCERT (कक्षा 6–10) से **Maths, English, Hindi, Science, सामान्य ज्ञान, तार्किक क्षमता** और कौशल-आधारित प्रश्न होंगे।</li>
-          <li style="margin-bottom: 12px;">परीक्षा की तिथि, समय और माध्यम (**Online/Offline**) e-mail / WhatsApp के माध्यम से सूचित किया जाएगा।</li>
-          <li style="margin-bottom: 12px; font-weight: 700; color: #DC3545;">परीक्षा के दौरान अनुशासन एवं ईमानदारी बनाए रखें; नकल पाए जाने पर उम्मीदवार अयोग्य ठहराया जा सकता है।</li>
-          <li style="margin-bottom: 12px;">परिणाम **सही उत्तर और कुल स्कोर (Merit)** के आधार पर घोषित किए जाएंगे।</li>
-        </ol>
+        <p style="font-size:.9rem;color:#555">
+          Registration acknowledgement और ID
+          <strong>24 घंटे के भीतर</strong>
+          Email / WhatsApp के माध्यम से भेजी जाएगी।
+        </p>
 
-        <div class="rules" role="region" aria-label="Terms and Conditions">
-          <h2 style="font-size:20px; color: var(--secondary); margin: 0 0 10px; padding: 0; border-bottom: none;">⚠️ Terms &amp; Conditions Summary</h2>
-          <p style="font-size: 14px; margin: 0; color: #555;">
-            यह contest skill-based है और Entry fee **non-refundable** है। Organizer का निर्णय अंतिम होगा। प्रतिभागी स्वयं के जोखिम व जिम्मेदारी पर भाग लें। पुरस्कार चयन प्रक्रिया **मेरिट पर आधारित** और पारदर्शी रखी जाएगी।
-          </p>
-        </div>
-      </section>
+        <p style="font-size:.85rem;color:#555">
+          ⚠️ बिना payment के किया गया form submission valid registration नहीं माना जाएगा।
+        </p>
+      </div>
 
-      <section class="guide-section" id="faq" aria-labelledby="faq-heading" style="padding-top: 10px;">
-        <h2 id="faq-heading">❓ अक्सर पूछे जाने वाले प्रश्न (FAQ)</h2>
+    </div>
+  </section>
 
-        <div class="faq-container">
-          <div class="faq-item">
-            <strong>Q1) Payment failed तो क्या करें?</strong><br>
-            A: RE-Payment करें व  failed Payment का screenshot (UTR के साथ) लेकर Google Form के support field में upload करें, या support ईमेल पर भेजें (<a href="mailto:osi@ftbh.onmicrosoft.com" style="color: var(--accent); font-weight: 500;">osi@ftbh.onmicrosoft.com</a>)।
-          </div>
+  <!-- EMBED FORM -->
+  <section class="section">
+    <h2>Registration Form (After Payment)</h2>
+    <div class="embed-wrap">
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSdiTTdVVCj2LeO0F0QB8-PylfsDMAd-EY75LFXUxACoE49R8Q/viewform?embedded=true"
+        loading="lazy"
+        referrerpolicy="no-referrer">
+      </iframe>
+    </div>
+  </section>
 
-          <div class="faq-item">
-            <strong>Q2) Certificate कब मिलेगा?</strong><br>
-            A: परिणाम घोषित होने के **7–14 कार्यदिवसों** के भीतर digital certificate उपलब्ध कराया जाएगाऔर Hard Copy दिए गये Address पर भेज दी जाएगी।
-          </div>
+  <!-- IMPORTANT -->
+  <section class="section">
+    <h2>महत्वपूर्ण सूचना</h2>
+    <p>
+      यह contest skill-based assessment और recognition के उद्देश्य से आयोजित किया जाता है।
+      यह किसी सरकारी परीक्षा, नौकरी की गारंटी या statutory certification का विकल्प नहीं है।
+    </p>
+    <p>
+      Digital certificate परिणाम घोषित होने के 7–14 कार्यदिवसों के भीतर प्रदान किया जाएगा।
+      Hard copy (जहाँ applicable हो) participant के दिए गए पते पर भेजी जा सकती है।
+    </p>
+  </section>
 
-          <div class="faq-item">
-            <strong>Q3) Exam mode क्या होगा?</strong><br>
-            A: अधिकांश मामलों में exam *Offline** होगा; कुछ locations पर **Online center** भी उपलब्ध हो सकते हैं (आपके द्वारा चुने गए स्थान पर निर्भर)।
-          </div>
+  <!-- SUPPORT -->
+  <section class="section">
+    <h2>सहायता एवं संपर्क</h2>
+    <p>
+      📧 <a href="mailto:osi@ftbh.onmicrosoft.com">osi@ftbh.onmicrosoft.com</a><br>
+      💬 WhatsApp: <a href="https://wa.me/919416711671" target="_blank">+91 94167 11671</a>
+    </p>
+  </section>
 
-          <div class="faq-item">
-            <strong>Q4) Entry fee refundable है?</strong><br>
-            A: नहीं — Entry fee **Non-refundable** है (Duplicate payment को छोड़कर)।
-          </div>
-        </div>
-      </section>
+</main>
 
-      <section aria-labelledby="support-heading">
-        <h2 id="support-heading" style="font-size:24px;margin:40px 0 15px;color:#111;border-bottom: 2px solid #E5E7EB; padding-bottom: 10px;">📞 सहायता और संपर्क</h2>
-        
-        <div class="support" aria-live="polite">
-          <p style="margin: 0;"><strong>भुगतान/तकनीकी समस्या के लिए:</strong></p> 
-          <p style="margin: 8px 0 0; font-size: 16px;">
-            कृपया हमें Payment UTR के साथ स्क्रीनशॉट भेजें:
-            <br>📧 Email: <a href="mailto:osi@ftbh.onmicrosoft.com">osi@ftbh.onmicrosoft.com</a> 
-            <br>💬 WhatsApp: <a href="https://wa.me/919416711671" target="_blank">+91 94167 11671</a> (Only WhatsApp)
-          </p>
-        </div>
-      </section>
-      
-    </article>
-  </main>
-
-  <div id="live-notification">
-    <div class="notif-icon">
-        ✅
+<footer>
+  <div class="footer-inner">
+    <div>
+      <strong>Orbital Skill Development Institute</strong><br>
+      Mega Skill Based Contest 2025
     </div>
     <div>
-        <p style="margin: 0; font-size: 15px; font-weight: bold; color: #333;" id="notif-text">Rahul from Delhi registered.</p>
-        <p style="margin: 0; font-size: 13px; color: #777;">अभी-अभी सफलतापूर्वक पंजीकरण किया</p>
+      <a href="/Skill-Based-Contest/privacy.html">Privacy Policy</a><br>
+      <a href="/Skill-Based-Contest/terms.html">Terms &amp; Conditions</a><br>
+      <a href="/Skill-Based-Contest/contact.html">Contact</a>
     </div>
   </div>
+  <small>© 2025 Orbital Skill Development Institute. All Rights Reserved.</small>
+</footer>
 
-
-  <footer>
-    <div class="wrap" style="max-width: 900px;">
-      <p style="margin: 0 0 10px;">© <span id="2025-26"></span> Orbital Skill Development Institute</p>
-       <p style="margin: 0 0 10px;"> Powered by OSI Pvt. Ltd</p>
-      <a href="/Skill-Based-Contest/privacy.html">Privacy Policy</a> |
-      <a href="/Skill-Based-Contest/terms.html">Terms & Conditions</a> |
-      <a href="/Skill-Based-Contest/contact.html">Contact Us</a>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // 6. LIVE REGISTRATION POPUP SCRIPT
-    const cities = ["Delhi", "Mumbai", "Jaipur", "Patna", "Lucknow", "Bengaluru", "Pune", "Kolkata", "Chandigarh"];
-    const names = ["Rohan", "Sneha", "Amit", "Priya", "Karan", "Aditi", "Vijay", "Meera", "Suresh"];
-    const notif = document.getElementById('live-notification');
-    const text = document.getElementById('notif-text');
-
-    function showNotification() {
-      const randomName = names[Math.floor(Math.random() * names.length)];
-      const randomCity = cities[Math.floor(Math.random() * cities.length)];
-      
-      text.innerText = `${randomName} ने ${randomCity} से पंजीकरण किया।`;
-      
-      // Show notification
-      notif.style.transform = "translateX(0)";
-      
-      // Hide notification after 4 seconds
-      setTimeout(() => {
-        // Check for mobile view and adjust hide direction
-        if (window.innerWidth <= 768) {
-            notif.style.transform = "translate(-50%, 150%)";
-        } else {
-            notif.style.transform = "translateX(-150%)";
-        }
-        scheduleNextNotification(); // Schedule the next one after the hide transition is done
-      }, 4000);
-    }
-
-    // Schedule next notification at random intervals (5 to 12 seconds)
-    const minInterval = 5000;
-    const maxInterval = 12000;
-
-    function scheduleNextNotification() {
-      const randomDelay = Math.floor(Math.random() * (maxInterval - minInterval + 1)) + minInterval;
-      setTimeout(showNotification, randomDelay); 
-    }
-
-    // Start the sequence after a short initial delay
-    setTimeout(showNotification, 2000);
-
-  </script>
 </body>
 </html>
