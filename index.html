@@ -123,6 +123,34 @@
     border-radius:6px;
   }
   .nav-links a:hover { color: var(--gold-dark); opacity:1; background: rgba(255,255,255,0.03); }
+@media (max-width: 768px) {
+
+  .nav-container{
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .logo{
+    font-size: 18px;
+  }
+
+  .nav-links{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .nav-links a{
+    font-size: 14px;
+    padding: 6px 10px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 6px;
+    white-space: nowrap;
+  }
+}
 
   /* Header */
   header{ text-align:center; padding:8px 0 0 }
