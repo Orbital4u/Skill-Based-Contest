@@ -1,174 +1,295 @@
 <!doctype html>
 <html lang="hi">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Terms & Conditions — Skill Based Contest | Orbital Skill Development</title>
-  <meta name="description" content="Skill Based Contest की आधिकारिक Terms & Conditions — Eligibility, Payment, Prizes, Exam Rules, Refund Policy, Fair-Use Policy और Legal Notices." />
+
+  <meta name="description" content="Skill Based Contest की आधिकारिक Terms & Conditions — Eligibility, Payment, Refund, Exam Rules, Prizes और Legal Policies." />
   <link rel="canonical" href="https://orbital4u.github.io/Skill-Based-Contest/terms.html" />
+
   <style>
-    :root{--accent:#4F0A5A;--bg:#f8f9fa;--text:#222}
+    :root{
+      --brand:#4F0A5A;
+      --bg:#f8f9fa;
+      --card:#ffffff;
+      --text:#222;
+    }
     body{
       font-family:'Noto Sans', Arial, sans-serif;
       background:var(--bg);
-      margin:0; padding:0;
+      margin:0;
       color:var(--text);
     }
-    .wrap{
+
+    /* NAV */
+    nav{
+      width:100%;
+      background:var(--brand);
+      padding:10px 0;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      box-shadow:0 3px 10px rgba(0,0,0,0.15);
+    }
+    .nav-inner{
+      max-width:1100px;
+      margin:auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:0 14px;
+    }
+    .nav-inner a{
+      color:#fff;
+      text-decoration:none;
+      font-weight:600;
+      font-size:15px;
+    }
+    .nav-links{display:flex;gap:18px}
+
+    /* HERO */
+    .hero{
+      background:linear-gradient(180deg,#F2CFEE,#fff);
+      padding:40px 16px 30px;
+    }
+    .hero .container{
+      max-width:980px;
+      margin:auto;
+    }
+    .hero h1{
+      margin:6px 0;
+      font-size:28px;
+      color:#111;
+    }
+    .hero p{
+      margin:0;
+      font-size:15px;
+      color:#444;
+      max-width:720px;
+    }
+
+    /* CONTENT CARD */
+    .page-wrap{
       max-width:980px;
       margin:30px auto;
-      background:#fff;
+      background:var(--card);
       padding:24px;
       border-radius:12px;
       box-shadow:0 6px 20px rgba(0,0,0,0.06);
     }
-    h1{color:var(--accent);margin-bottom:12px}
-    h2{color:#111;margin:16px 0 8px}
-    p,li{font-size:15px;line-height:1.6}
+    .page-wrap h2{margin-top:22px;color:#111}
+    .page-wrap p,.page-wrap li{
+      font-size:15px;
+      line-height:1.6;
+    }
     ul{margin-left:18px}
-    footer{margin-top:18px;color:#555;font-size:14px;text-align:center}
-    @media(max-width:600px){.wrap{margin:12px;padding:16px}h1{font-size:22px}}
+
+    /* FOOTER */
+    .site-footer{
+      background:var(--brand);
+      color:#fff;
+      padding:30px 16px 24px;
+      margin-top:40px;
+    }
+    .footer-inner{
+      max-width:1100px;
+      margin:auto;
+      text-align:center;
+    }
+    .footer-brand p{
+      margin:6px 0 14px;
+      font-size:14px;
+      opacity:0.85;
+    }
+    .footer-links{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-bottom:14px;
+    }
+    .footer-links a{
+      color:#F2CFEE;
+      font-size:14px;
+      text-decoration:none;
+      font-weight:600;
+    }
+    .footer-links a:hover{
+      text-decoration:underline;
+      color:#ffffff;
+    }
+    .footer-copy{
+      font-size:13px;
+      opacity:0.75;
+    }
+
+    @media(max-width:600px){
+      .hero h1{font-size:22px}
+      .page-wrap{margin:12px;padding:16px}
+     @media(max-width:768px){
+  .nav-inner{
+    flex-wrap:wrap;
+    gap:8px;
+  }
+  .nav-links{
+    width:100%;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:14px;
+    display:flex;
+    margin-top:8px;
+  }
+}
+
+    }
   </style>
 </head>
-<body>
-  <!-- NAVIGATION BAR -->
-<nav style="
-  width:100%;
-  background:#4F0A5A;
-  padding:10px 0;
-  position:sticky;
-  top:0;
-  z-index:1000;
-  box-shadow:0 3px 10px rgba(0,0,0,0.15);
-">
-  <div style="
-    max-width:1100px;
-    margin:auto;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:0 14px;
-  ">
-    <a href="/Skill-Based-Contest/" style="color:white; font-size:20px; font-weight:700; text-decoration:none;">
-      Orbital Skill
-    </a>
 
-    <div style="display:flex; gap:18px;">
-      <a href="/Skill-Based-Contest/" style="color:white; text-decoration:none;">Home</a>
-      <a href="/Skill-Based-Contest/about.html" style="color:white; text-decoration:none;">About</a>
-      <a href="/Skill-Based-Contest/registration.html" style="color:white; text-decoration:none;">Registration</a>
-      <a href="/Skill-Based-Contest/contact.html" style="color:white; text-decoration:none;">Contact</a>
-      <a href="/Skill-Based-Contest/terms.html" style="color:white; text-decoration:none;">Terms</a>
-      <a href="/Skill-Based-Contest/privacy.html" style="color:white; text-decoration:none;">Privacy</a>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="/Skill-Based-Contest/">Orbital Skill</a>
+    <div class="nav-links">
+      <a href="/Skill-Based-Contest/">Home</a>
+      <a href="/Skill-Based-Contest/about.html">About</a>
+      <a href="/Skill-Based-Contest/registration.html">Registration</a>
+      <a href="/Skill-Based-Contest/contact.html">Contact</a>
+      <a href="/Skill-Based-Contest/terms.html">Terms</a>
+      <a href="/Skill-Based-Contest/privacy.html">Privacy</a>
     </div>
   </div>
 </nav>
-<main class="wrap">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <p>Legal Information</p>
     <h1>Terms & Conditions</h1>
-    <p><strong>Effective Date:</strong> 9 December 2025</p>
-
     <p>
-      यह Terms & Conditions (“Terms”) Orbital Skill Development Institute द्वारा आयोजित  
-      <strong>Skill Based Contest / Mega Quiz Challenge</strong> में भाग लेने वाले सभी प्रतिभागियों पर लागू होते हैं।  
-      Contest में भाग लेकर आप इन सभी नियमों को मानने के लिए सहमत होते हैं।
+      Skill Based Contest में भाग लेने से पहले कृपया नीचे दिए गए नियमों और शर्तों को
+      ध्यानपूर्वक पढ़ें। Contest में भाग लेना इन शर्तों की स्वीकृति माना जाएगा।
     </p>
+  </div>
+</section>
 
-    <h2>1. Contest की प्रकृति</h2>
-    <ul>
-      <li>यह एक <strong>Skill-Based Competition</strong> है, कोई lottery, gambling या betting activity नहीं।</li>
-      <li>विजेताओं का चयन परीक्षा में प्राप्त स्कोर और घोषित नियमों के आधार पर किया जाता है।</li>
-      <li>कुछ prize categories में tie-break या lucky draw (only among top scorers) लागू हो सकता है।</li>
-    </ul>
+<!-- CONTENT -->
+<main class="page-wrap">
 
-    <h2>2. Eligibility (पात्रता)</h2>
-    <ul>
-      <li>प्रतिभागी की आयु 13–25 वर्ष के बीच होनी चाहिए।</li>
-      <li>कक्षा 9th और उससे ऊपर के विद्यार्थी पात्र हैं।</li>
-      <li>18 वर्ष से कम आयु के प्रतिभागियों के लिए guardian की सहमति आवश्यक है।</li>
-    </ul>
+  <h2>Effective Date</h2>
+  <p><strong>9 December 2025</strong></p>
 
-    <h2>3. Registration व Payment</h2>
-    <ul>
-      <li>Entry Fee: ₹750 (non-refundable)।</li>
-      <li>Payment UPI के माध्यम से किया जाता है: <strong>hmt2cu@okaxis</strong>.</li>
-      <li>Payment के बाद प्रतिभागी को Google Form भरकर screenshot upload करना अनिवार्य है।</li>
-      <li>गलत/अपूर्ण जानकारी देने पर registration रद्द किया जा सकता है।</li>
-    </ul>
+  <p>
+    यह Terms & Conditions (“Terms”) Orbital Skill Development Institute द्वारा आयोजित
+    <strong>Skill Based Contest / Mega Quiz Challenge</strong> में भाग लेने वाले सभी
+    प्रतिभागियों पर लागू होते हैं।
+  </p>
 
-    <h2>4. Refund Policy</h2>
-    <ul>
-      <li>Entry fee किसी भी परिस्थिति में refundable नहीं है।</li>
-      <li>यदि payment दो बार deduct हो जाए, तो duplicate transaction का refund 5–7 कार्यदिवस में किया जा सकता है (UPI proof आवश्यक)।</li>
-      <li>Contest में अनुपस्थित रहने पर कोई भी refund या adjustment नहीं किया जाएगा।</li>
-    </ul>
+  <h2>1. Contest की प्रकृति</h2>
+  <ul>
+    <li>यह एक Skill-Based Competition है, कोई lottery या gambling activity नहीं।</li>
+    <li>विजेताओं का चयन परीक्षा में प्राप्त स्कोर के आधार पर किया जाता है।</li>
+    <li>कुछ categories में tie-break लागू हो सकता है।</li>
+  </ul>
 
-    <h2>5. Exam Rules (महत्वपूर्ण)</h2>
-    <ul>
-      <li>परीक्षा NCERT (कक्षा 6–10) आधारित MCQs, GK और reasoning से बनी होगी।</li>
-      <li>Cheating, impersonation या unfair practice पाए जाने पर तुरंत disqualify किया जाएगा।</li>
-      <li>Exam time, mode (online/offline) और center-details WhatsApp/SMS/email द्वारा भेजी जाएँगी।</li>
-      <li>Results scoring के आधार पर घोषित होंगे और decision final होगा।</li>
-    </ul>
+  <h2>2. Eligibility</h2>
+  <ul>
+    <li>आयु सीमा: 13–25 वर्ष</li>
+    <li>कक्षा 9th या उससे ऊपर के विद्यार्थी</li>
+    <li>18 वर्ष से कम के लिए guardian consent आवश्यक</li>
+  </ul>
 
-    <h2>6. Certificates & Results</h2>
-    <ul>
-      <li>सभी प्रतिभागियों को participation/achievement certificate दिया जा सकता है।</li>
-      <li>Top scorers को merit certificates और rank list में जगह मिलेगी।</li>
-      <li>Certificate 7–14 दिनों में digital रूप से उपलब्ध कराया जाता है।</li>
-    </ul>
+  <h2>3. Registration & Payment</h2>
+  <ul>
+    <li>Entry Fee: ₹750 (Non-Refundable)</li>
+    <li>Payment UPI के माध्यम से: <strong>hmt2cu@okaxis</strong></li>
+    <li>Payment के बाद Google Form + Screenshot अनिवार्य</li>
+  </ul>
 
-    <h2>7. Prizes (इनाम)</h2>
-    <ul>
-      <li>मुख्य इनाम: Electric Scooty (approximately ₹75,000)।</li>
-      <li>Prize eligibility केवल valid exam-takers तक सीमित होगी।</li>
-      <li>Winner verification अनिवार्य होगा (ID proof)।</li>
-      <li>Organizer prize model बदलने का अधिकार रखता है (availability या sponsorship पर निर्भर)।</li>
-    </ul>
+  <h2>4. Refund Policy</h2>
+  <ul>
+    <li>Entry fee refundable नहीं है</li>
+    <li>Duplicate payment का refund 5–7 कार्यदिवस में</li>
+  </ul>
 
-    <h2>8. Data & Privacy</h2>
-    <ul>
-      <li>आपका डेटा Privacy Policy के अनुसार उपयोग किया जाता है।</li>
-      <li>हम कोई भी बैंक/UPI PIN, CVV, कार्ड विवरण स्टोर नहीं करते।</li>
-      <li>Analytics, exam processing और support के लिए basic logs उपयोग किए जा सकते हैं।</li>
-    </ul>
+  <h2>5. Exam Rules</h2>
+  <ul>
+    <li>NCERT (Class 6–10) आधारित MCQs</li>
+    <li>Cheating पर immediate disqualification</li>
+    <li>Exam details WhatsApp / Email से</li>
+  </ul>
 
-    <h2>9. Disqualification Conditions</h2>
-    <ul>
-      <li>गलत जानकारी देना</li>
-      <li>Fake payment proof देना</li>
-      <li>Cheating या unfair advantage लेना</li>
-      <li>Abusive या illegal behavior</li>
-    </ul>
+  <h2>6. Certificates & Results</h2>
+  <ul>
+    <li>Participation / Merit Certificate</li>
+    <li>Digital certificates 7–14 दिनों में</li>
+  </ul>
 
-    <h2>10. Limitation of Liability</h2>
-    <p>
-      Contest में भाग लेना पूरी तरह स्वैच्छिक और आपकी जिम्मेदारी पर है।  
-      किसी technical issue, network problem, payment delay, exam interruption या unforeseen circumstances के लिए  
-      Organizer उत्तरदायी नहीं होगा।
-    </p>
+  <h2>7. Prizes</h2>
+  <ul>
+    <li>Main Prize: Electric Scooty (₹75,000 approx.)</li>
+    <li>Prize verification अनिवार्य</li>
+  </ul>
 
-    <h2>11. Changes to Terms</h2>
-    <p>Organizer किसी भी समय Terms में बदलाव कर सकता है। अपडेटेड Terms वेबसाइट पर प्रकाशित किए जाएंगे।</p>
+  <h2>8. Data & Privacy</h2>
+  <ul>
+    <li>Data Privacy Policy के अनुसार use होगा</li>
+    <li>UPI / Card details store नहीं किए जाते</li>
+  </ul>
 
-    <h2>12. Contact for Queries</h2>
-    <p>किसी भी सहायता, प्रश्न या शिकायत के लिए email करें:<br>
-    <strong>Email:</strong> <a href="mailto:info@orbital4u.example">info@orbital4u.example</a></p>
+  <h2>9. Disqualification</h2>
+  <ul>
+    <li>Fake information</li>
+    <li>Fake payment proof</li>
+    <li>Unfair practices</li>
+  </ul>
 
-    <footer style="text-align:center; padding:20px; margin-top:30px; font-size:14px; color:#444;">
-  © <span id="year"></span> Orbital Skill Development Institute —
-  <a href="/Skill-Based-Contest/privacy.html">Privacy</a> |
-  <a href="/Skill-Based-Contest/terms.html">Terms</a> |
-  <a href="/Skill-Based-Contest/contact.html">Contact</a>
+  <h2>10. Limitation of Liability</h2>
+  <p>
+    Contest में भाग लेना आपकी स्वयं की जिम्मेदारी पर है।
+    Technical या network issues के लिए Organizer उत्तरदायी नहीं होगा।
+  </p>
+
+  <h2>11. Changes</h2>
+  <p>Organizer किसी भी समय Terms update कर सकता है।</p>
+
+  <h2>12. Contact</h2>
+  <p>
+    सहायता के लिए ईमेल करें:<br>
+    <strong>osi@ftbh.onmicrosoft.com</strong>
+  </p>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <strong>Orbital Skill Development Institute</strong>
+      <p>Develop Skills. Earn Recognition. Win Big.</p>
+    </div>
+
+    <nav class="footer-links">
+      <a href="/Skill-Based-Contest/">Home</a>
+      <a href="/Skill-Based-Contest/about.html">About</a>
+      <a href="/Skill-Based-Contest/registration.html">Registration</a>
+      <a href="/Skill-Based-Contest/contact.html">Contact</a>
+      <a href="/Skill-Based-Contest/terms.html">Terms</a>
+      <a href="/Skill-Based-Contest/privacy.html">Privacy</a>
+    </nav>
+
+    <div class="footer-copy">
+      © <span id="year"></span> Orbital Skill Development Institute. All Rights Reserved.
+    </div>
+  </div>
 </footer>
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 
-  </main>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
+ 
